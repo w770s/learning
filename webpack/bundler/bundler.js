@@ -51,6 +51,7 @@ const MouduleAnalyseGraph = (entry) =>{ // 所有文件的依赖图谱
 const ModuleAnalyseToString=(entry)=>{
     const graph = JSON.stringify(MouduleAnalyseGraph(entry))
     //code 中 exports 和 require 浏览器无法处理，自己处理 // 闭包，避免污染全局
+    // return 出的内容直接丢到浏览器上 运行 helloworld
     return `
          (function(graph){ 
             function require(entry){
