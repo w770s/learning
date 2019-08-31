@@ -1,0 +1,25 @@
+.show-enter,.show-appear{
+    opacity: 0;
+}
+
+.show-enter-active,.show-appear-active{
+    opacity: 0.5;
+    color:red;
+    transition: all 1.0s ease-in;
+}
+.show-enter-done{
+    opacity: 1.0;
+    color:blue;
+}
+.show-exit{
+    opacity: 1.0;
+    color:blue;
+}
+.show-exit-active{
+    opacity: 0.5;
+    color:red;
+    transition: all 1.0s ease-in;
+}
+.show-exit-done{
+    opacity: 0.0;
+}

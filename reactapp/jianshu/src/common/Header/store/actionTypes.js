@@ -1,0 +1,7 @@
+export const HANDEL_INPUT_ONFOCUS = 'header/handel_input_onfocus'
+export const HANDEL_INPUT_ONBLUR = 'header/handel_input_onblur'
+export const HANDEL_INPUT_ONFOCUS_AJAX = 'header/handel_input_onfocus_getAjax'
+export const ON_MOUSE_ENTER = 'header/on_mouse_enter'
+export const ON_MOUSE_LEAVE = 'header/on_mouse_leave'
+export const ON_CHANGE_PAGE = 'header/on_change_page'
+export const COMPONENT_DID_MOUNTED = 'header/component_did_mounted'

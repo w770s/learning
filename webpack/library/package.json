@@ -1,0 +1,17 @@
+{
+  "name": "library-peter-xu",
+  "version": "1.0.0",
+  "description": "js library",
+  "main": "./dist/library-peter-xu.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "peter Xu",
+  "license": "MST",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
+}
