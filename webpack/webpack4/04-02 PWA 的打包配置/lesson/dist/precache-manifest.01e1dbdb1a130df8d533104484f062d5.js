@@ -9,6 +9,6 @@ self.__precacheManifest = [
   },
   {
     "revision": "09c5b36ba1e9a3d30f19885b4e8fc793",
-    "url": "index.html"
+    "url": "router.js.html"
   }
 ];

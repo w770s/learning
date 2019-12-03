@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
 	mode: 'development',
 	entry: {
-		main: './src/index.js'
+		main: './src/router.js'
 	},
 	resolveLoader: {
 		modules: ['node_modules', './loaders']

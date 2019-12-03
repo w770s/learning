@@ -5,9 +5,9 @@ const path = require('path')
 module.exports = {
     mode: 'development',
     entry:{
-        main: './src/index.js' // 打包默认生成 main.js 下面的出口可以配置文件名
+        main: './src/router.js' // 打包默认生成 main.js 下面的出口可以配置文件名
     },
-    // entry: './src/index.js', // 也可以直接写一个字符串，
+    // entry: './src/router.js', // 也可以直接写一个字符串，
     devServer: {
         // overlay: true, // eslint 页面上看错误
         contentBase: './dist',

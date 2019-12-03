@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
 	mode: 'development',
 	entry: {
-		main: './src/index.js'
+		main: './src/router.js'
 	},
 	module: {
 		rules: [{
@@ -15,7 +15,7 @@ module.exports = {
 					outputPath: 'images/',
 					limit: 10240
 				}
-			} 
+			}
 		}]
 	},
 	output: {

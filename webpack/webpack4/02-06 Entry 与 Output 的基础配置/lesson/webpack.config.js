@@ -5,8 +5,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
 	mode: 'development',
 	entry: {
-		main: './src/index.js',
-		sub: './src/index.js'
+		main: './src/router.js',
+		sub: './src/router.js'
 	},
 	module: {
 		rules: [{
@@ -18,16 +18,16 @@ module.exports = {
 					outputPath: 'images/',
 					limit: 10240
 				}
-			} 
+			}
 		}, {
 			test: /\.(eot|ttf|svg)$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}, {
 			test: /\.scss$/,
 			use: [
-				'style-loader', 
+				'style-loader',
 				{
 					loader: 'css-loader',
 					options: {

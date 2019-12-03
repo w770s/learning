@@ -3,14 +3,14 @@ const path = require('path');
 module.exports = {
 	mode: 'development',
 	entry: {
-		main: './src/index.js'
+		main: './src/router.js'
 	},
 	module: {
 		rules: [{
 			test: /\.jpg$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}]
 	},
 	output: {

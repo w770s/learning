@@ -64,13 +64,13 @@ const makePlugin = (config)=>{
 
 const config = {
     entry: {
-        index: './src/index.js',
+        index: './src/router.js',
         list: './src/list.js',
         detail: './src/details.js'
     },
     resolve:{
         extensions:['.js','.jsx'], // 先找 js 文件在找 jsx 文件
-        mainFiles:['index','child'], // import Child from './child/' 引入目录后尝试 先找 index 后 child
+        mainFiles:['router.js','child'], // import Child from './child/' 引入目录后尝试 先找 index 后 child
         alias:{
             linan: path.resolve(__dirname, '../src/child') // import Child from 'linan' 导入本地模块取一个别名
         }

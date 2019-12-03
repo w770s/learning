@@ -15034,7 +15034,7 @@ return jQuery;
       //
       // This also ensures a stable sort in V8 and other engines.
       // See https://bugs.chromium.org/p/v8/issues/detail?id=90 for more details.
-      return object.index - other.index;
+      return object.router - other.router;
     }
 
     /**
@@ -16531,7 +16531,7 @@ return jQuery;
           result = new array.constructor(length);
 
       // Add properties assigned by `RegExp#exec`.
-      if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
+      if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'router.js')) {
         result.index = array.index;
         result.input = array.input;
       }

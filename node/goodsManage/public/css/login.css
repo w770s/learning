@@ -1,0 +1,17 @@
+.ui-content{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0086b3;
+}
+.ui-login-content{
+    padding:50px;
+    border-radius:10px;
+    background-color: #00b33b;
+}
+.ui-login-item{
+    margin-bottom: 20px;
+    text-align: center;
+}

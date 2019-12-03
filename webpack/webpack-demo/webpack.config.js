@@ -12,7 +12,7 @@ module.exports = {
     // devtool: 'cheap-source-map',  // source-map（生成相应的map文件匹配） 和 cheap-source-map（） 映射关系不一样，cheap跟不好性能
     devtool: 'cheap-module-source-map', // 没有 map 文件产生 发在 main.js （base64）
     entry: {
-        index: './src/index.js'
+        index: './src/router.js'
     },
     devServer: {
         contentBase: './dist',

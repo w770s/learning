@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="index">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -9,7 +9,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
+  name: 'index',
   components: {
     HelloWorld
   }
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-#app {
+#index {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

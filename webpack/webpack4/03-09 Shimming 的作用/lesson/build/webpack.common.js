@@ -5,11 +5,11 @@ const webpack = require('webpack');
 
 module.exports = {
 	entry: {
-		main: './src/index.js',
+		main: './src/router.js',
 	},
 	module: {
-		rules: [{ 
-			test: /\.js$/, 
+		rules: [{
+			test: /\.js$/,
 			exclude: /node_modules/,
 			use: [{
 				loader: 'babel-loader'
@@ -25,18 +25,18 @@ module.exports = {
 					outputPath: 'images/',
 					limit: 10240
 				}
-			} 
+			}
 		}, {
 			test: /\.(eot|ttf|svg)$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
-		}), 
+		}),
 		new CleanWebpackPlugin(['dist'], {
 			root: path.resolve(__dirname, '../')
 		}),

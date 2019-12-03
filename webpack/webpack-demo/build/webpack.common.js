@@ -7,7 +7,7 @@ const prodConfig = require('./webpack.prod');
 
 const commonConfig = {
     entry: {
-        main: './src/index.js'
+        main: './src/router.js'
     },
     module:{
         rules:[

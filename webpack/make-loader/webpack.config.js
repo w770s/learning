@@ -3,7 +3,7 @@ const path = require('path');
 module.exports={
     mode: 'development',
     entry:{
-        main: './src/index.js',
+        main: './src/router.js',
     },
     resolveLoader:{ // 解析 loader 规则 先node_modules 在 ./loader
         modules:['node_modules','./loaders']

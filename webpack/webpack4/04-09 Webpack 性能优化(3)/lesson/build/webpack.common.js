@@ -8,7 +8,7 @@ const webpack = require('webpack');
 const plugins = [
 	new HtmlWebpackPlugin({
 		template: 'src/index.html'
-	}), 
+	}),
 	new CleanWebpackPlugin(['dist'], {
 		root: path.resolve(__dirname, '../')
 	})
@@ -30,14 +30,14 @@ files.forEach(file => {
 
 module.exports = {
 	entry: {
-		main: './src/index.js',
+		main: './src/router.js',
 	},
 	resolve: {
 		extensions: ['.js', '.jsx'],
 	},
 	module: {
-		rules: [{ 
-			test: /\.jsx?$/, 
+		rules: [{
+			test: /\.jsx?$/,
 			include: path.resolve(__dirname, '../src'),
 			use: [{
 				loader: 'babel-loader'
@@ -51,12 +51,12 @@ module.exports = {
 					outputPath: 'images/',
 					limit: 10240
 				}
-			} 
+			}
 		}, {
 			test: /\.(eot|ttf|svg)$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}]
 	},
 	plugins,

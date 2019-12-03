@@ -51,5 +51,5 @@ const makeDependenciesGraph = (entry) => {
 	return graph;
 }
 
-const graghInfo = makeDependenciesGraph('./src/index.js');
+const graghInfo = makeDependenciesGraph('./src/router.js');
 console.log(graghInfo);

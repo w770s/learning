@@ -70,6 +70,6 @@ const generateCode = (entry) => {
 	`;
 }
 
-const code = generateCode('./src/index.js');
+const code = generateCode('./src/router.js');
 console.log(code);
 

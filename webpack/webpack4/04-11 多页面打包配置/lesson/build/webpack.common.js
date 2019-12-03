@@ -39,7 +39,7 @@ const makePlugins = (configs) => {
 
 const configs = {
 	entry: {
-		index: './src/index.js',
+		index: './src/router.js',
 		list: './src/list.js',
 		detail: './src/detail.js',
 	},
@@ -47,8 +47,8 @@ const configs = {
 		extensions: ['.js', '.jsx'],
 	},
 	module: {
-		rules: [{ 
-			test: /\.jsx?$/, 
+		rules: [{
+			test: /\.jsx?$/,
 			include: path.resolve(__dirname, '../src'),
 			use: [{
 				loader: 'babel-loader'
@@ -62,12 +62,12 @@ const configs = {
 					outputPath: 'images/',
 					limit: 10240
 				}
-			} 
+			}
 		}, {
 			test: /\.(eot|ttf|svg)$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}]
 	},
 	optimization: {

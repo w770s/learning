@@ -5,10 +5,10 @@ const path = require('path')
 module.exports = {
     mode: 'development',
     entry:{
-        main: './src/index.js', // 打包默认生成 main.js 下面的出口可以配置文件名
-        sub: './src/index.js'
+        main: './src/router.js', // 打包默认生成 main.js 下面的出口可以配置文件名
+        sub: './src/router.js'
     },
-    // entry: './src/index.js', // 也可以直接写一个字符串，
+    // entry: './src/router.js', // 也可以直接写一个字符串，
     module:{
         rules:[{
             test: /\.(png|jpg|jpeg)$/,

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= data %></title>
+</head>
+<body>
+<div>这是一个ejs模版引擎 http://jspang.com/wp-admin/post.php?post=2760&action=edit#</div>
+<h1><%= data %></h1>
+<p>EJS Welcome to 首页</p>
+</br><hr>
+<% for(let i=0;i<list.length;i++) { %>
+    <h2><%= list[i] %></h2>
+<% } %>
+<h2><%- str %></h2>
+</body>
+</html>

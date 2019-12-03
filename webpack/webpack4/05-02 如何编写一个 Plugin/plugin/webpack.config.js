@@ -4,7 +4,7 @@ const CopyRightWebpackPlugin = require('./plugins/copyright-webpack-plugin');
 module.exports = {
 	mode: 'development',
 	entry: {
-		main: './src/index.js'
+		main: './src/router.js'
 	},
 	plugins: [
 		new CopyRightWebpackPlugin()

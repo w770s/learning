@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 module.exports = {
 	entry: {
-		main: './src/index.js',
+		main: './src/router.js',
 	},
 	resolve: {
 		extensions: ['.js', '.jsx'],
@@ -14,8 +14,8 @@ module.exports = {
 		}
 	},
 	module: {
-		rules: [{ 
-			test: /\.jsx?$/, 
+		rules: [{
+			test: /\.jsx?$/,
 			include: path.resolve(__dirname, '../src'),
 			use: [{
 				loader: 'babel-loader'
@@ -29,18 +29,18 @@ module.exports = {
 					outputPath: 'images/',
 					limit: 10240
 				}
-			} 
+			}
 		}, {
 			test: /\.(eot|ttf|svg)$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
-		}), 
+		}),
 		new CleanWebpackPlugin(['dist'], {
 			root: path.resolve(__dirname, '../')
 		})

@@ -854,7 +854,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/index.js","vendors~main"]);
+/******/ 	deferredModules.push(["./src/router.js","vendors~main"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -863,14 +863,14 @@
 
 /***/ "./src/index.js":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./src/router.js ***!
   \**********************/
 /*! no exports provided */
 /*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n// import test from './test.js';\n// console.log(test.name);\n\nvar element = document.createElement('div');\nelement.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join(['Dell', 'Lee'], '-');\ndocument.body.appendChild(element); // function getComponent() {\n// \treturn import(/* webpackChunkName:\"lodash\" */ 'lodash').then(({ default: _ }) => {\n// \t\tvar element = document.createElement('div');\n// \t\telement.innerHTML = _.join(['Dell', 'Lee'], '-');\n// \t\treturn element;\n// \t})\n// }\n// getComponent().then(element => {\n// \tdocument.body.appendChild(element);\n// });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpbXBvcnQgdGVzdCBmcm9tICcuL3Rlc3QuanMnO1xuLy8gY29uc29sZS5sb2codGVzdC5uYW1lKTtcblxuaW1wb3J0IF8gZnJvbSAnbG9kYXNoJztcblxudmFyIGVsZW1lbnQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbmVsZW1lbnQuaW5uZXJIVE1MID0gXy5qb2luKFsnRGVsbCcsICdMZWUnXSwgJy0nKTtcbmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoZWxlbWVudCk7XG5cbi8vIGZ1bmN0aW9uIGdldENvbXBvbmVudCgpIHtcbi8vIFx0cmV0dXJuIGltcG9ydCgvKiB3ZWJwYWNrQ2h1bmtOYW1lOlwibG9kYXNoXCIgKi8gJ2xvZGFzaCcpLnRoZW4oKHsgZGVmYXVsdDogXyB9KSA9PiB7XG4vLyBcdFx0dmFyIGVsZW1lbnQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbi8vIFx0XHRlbGVtZW50LmlubmVySFRNTCA9IF8uam9pbihbJ0RlbGwnLCAnTGVlJ10sICctJyk7XG4vLyBcdFx0cmV0dXJuIGVsZW1lbnQ7XG4vLyBcdH0pXG4vLyB9XG5cbi8vIGdldENvbXBvbmVudCgpLnRoZW4oZWxlbWVudCA9PiB7XG4vLyBcdGRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoZWxlbWVudCk7XG4vLyB9KTtcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUVBO0FBRUE7QUFDQTtBQUNBO0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n// import test from './test.js';\n// console.log(test.name);\n\nvar element = document.createElement('div');\nelement.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join(['Dell', 'Lee'], '-');\ndocument.body.appendChild(element); // function getComponent() {\n// \treturn import(/* webpackChunkName:\"lodash\" */ 'lodash').then(({ default: _ }) => {\n// \t\tvar element = document.createElement('div');\n// \t\telement.innerHTML = _.join(['Dell', 'Lee'], '-');\n// \t\treturn element;\n// \t})\n// }\n// getComponent().then(element => {\n// \tdocument.body.appendChild(element);\n// });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpbXBvcnQgdGVzdCBmcm9tICcuL3Rlc3QuanMnO1xuLy8gY29uc29sZS5sb2codGVzdC5uYW1lKTtcblxuaW1wb3J0IF8gZnJvbSAnbG9kYXNoJztcblxudmFyIGVsZW1lbnQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbmVsZW1lbnQuaW5uZXJIVE1MID0gXy5qb2luKFsnRGVsbCcsICdMZWUnXSwgJy0nKTtcbmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoZWxlbWVudCk7XG5cbi8vIGZ1bmN0aW9uIGdldENvbXBvbmVudCgpIHtcbi8vIFx0cmV0dXJuIGltcG9ydCgvKiB3ZWJwYWNrQ2h1bmtOYW1lOlwibG9kYXNoXCIgKi8gJ2xvZGFzaCcpLnRoZW4oKHsgZGVmYXVsdDogXyB9KSA9PiB7XG4vLyBcdFx0dmFyIGVsZW1lbnQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbi8vIFx0XHRlbGVtZW50LmlubmVySFRNTCA9IF8uam9pbihbJ0RlbGwnLCAnTGVlJ10sICctJyk7XG4vLyBcdFx0cmV0dXJuIGVsZW1lbnQ7XG4vLyBcdH0pXG4vLyB9XG5cbi8vIGdldENvbXBvbmVudCgpLnRoZW4oZWxlbWVudCA9PiB7XG4vLyBcdGRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoZWxlbWVudCk7XG4vLyB9KTtcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUVBO0FBRUE7QUFDQTtBQUNBO0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/router.js\n");
 
 /***/ })
 

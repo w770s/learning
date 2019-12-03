@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EjsTitle</title>
+    </head>
+    <body>
+        <%- include ./header.ejs%>
+<!--   外部引入ejs文件     -->
+        <ul>
+            <% data.forEach(function(item){ %>
+                <li><%= item.value %></li>
+            <% })%>
+        </ul>
+        <p><%data%></p>
+    </body>
+</html>

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/router.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -110,12 +110,12 @@ eval("function Header() {\n\tvar dom = document.getElementById('root');\n\tvar h
 
 /***/ "./src/index.js":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./src/router.js ***!
   \**********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var Header = __webpack_require__(/*! ./header.js */ \"./src/header.js\");\nvar Sidebar = __webpack_require__(/*! ./sidebar.js */ \"./src/sidebar.js\");\nvar Content = __webpack_require__(/*! ./content.js */ \"./src/content.js\");\n\nnew Header();\nnew Sidebar();\nnew Content();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("var Header = __webpack_require__(/*! ./header.js */ \"./src/header.js\");\nvar Sidebar = __webpack_require__(/*! ./sidebar.js */ \"./src/sidebar.js\");\nvar Content = __webpack_require__(/*! ./content.js */ \"./src/content.js\");\n\nnew Header();\nnew Sidebar();\nnew Content();\n\n//# sourceURL=webpack:///./src/router.js?");
 
 /***/ }),
 

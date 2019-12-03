@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">添加</a>
+</br>
+<div>koa html 模版引擎</div>
+<table border="1px" width="100%">
+    {{each data}}
+        <tr>
+             <td>{{data[$index].username}}</td>
+             <td>{{data[$index].age}}</td>
+        </tr>
+    {{/each}}
+</table>
+{{include './bodyParser.ejs'}}
+</body>
+</html>

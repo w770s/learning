@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+</head>
+<body>
+<h1><%= data %></h1>
+<ul>
+    <% data.forEach(function(item){%>
+    <li><%=item.title %></li>
+    <li><%=item.name %></li>
+    <% }) %>
+</ul>
+<form action="/do" method="post">
+    <input type="text" name="username" /></br>
+    <input type="password" name="password" /></br>
+    <input type="submit" value="提交" />
+</form>
+</body>
+</html>

@@ -27,5 +27,5 @@ const moduleAnalyser = (filename) => {
 	}
 }
 
-const moduleInfo = moduleAnalyser('./src/index.js');
+const moduleInfo = moduleAnalyser('./src/router.js');
 console.log(moduleInfo);

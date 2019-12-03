@@ -72,7 +72,7 @@
 // /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header__ = __webpack_require__(1);
 // /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__content__ = __webpack_require__(2);
 // /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer__ = __webpack_require__(3);
-// // ES MODUle 浏览器是无法识别的，webpack 就上场了，其实就相当于翻译了下面的话 npx webpack index.js
+// // ES MODUle 浏览器是无法识别的，webpack 就上场了，其实就相当于翻译了下面的话 npx webpack router.js
 //
 //
 //

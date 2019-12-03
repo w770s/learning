@@ -69,7 +69,7 @@ const ModuleAnalyseToString=(entry)=>{
     `
 }
 
-const analyseResult = ModuleAnalyseToString('./src/index.js')
+const analyseResult = ModuleAnalyseToString('./src/router.js')
 
 console.log(analyseResult) // helloWorld
 

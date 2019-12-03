@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<%- include('./public/header.ejs') %>
+<h1><%=username%></h1>
+<h1><%=title%></h1>
+<h2><%-content%></h2>
+<div>koa ejs 模版引擎</div>
+<ul>
+    <%for(let i = 0; i<arr.length;i++){%>
+        <li><%=arr[i]%></li>
+    <%}%>
+</ul>
+<%if(number>0){%>
+    <p>Number:<%=number%></p>
+<%}%>
+</body>
+</html>

@@ -1,7 +1,7 @@
 main(){
-    // 句尾都得加； 
+    // 句尾都得加；
     //  dart 数据类型  int double String bool List maps Runes Symbol
-    
+
     // int a= 12; // 整型
     // double b = 12; // 浮点型 （整型和浮点型都可定义）
     // double c = 12.1;
@@ -76,6 +76,6 @@ main(){
     // if(b is int){
     //   print(12);
     // }
-      
-    
-} 
+
+
+}

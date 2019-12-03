@@ -15,7 +15,7 @@ module.exports = {
 	mode: 'development',
 	devtool: 'cheap-module-eval-source-map',
 	entry: {
-		main: './src/index.js'
+		main: './src/router.js'
 	},
 	devServer: {
 		contentBase: './dist',
@@ -25,9 +25,9 @@ module.exports = {
 		hotOnly: true
 	},
 	module: {
-		rules: [{ 
-			test: /\.js$/, 
-			exclude: /node_modules/, 
+		rules: [{
+			test: /\.js$/,
+			exclude: /node_modules/,
 			loader: 'babel-loader',
 		}, {
 			test: /\.(jpg|png|gif)$/,
@@ -38,16 +38,16 @@ module.exports = {
 					outputPath: 'images/',
 					limit: 10240
 				}
-			} 
+			}
 		}, {
 			test: /\.(eot|ttf|svg)$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}, {
 			test: /\.scss$/,
 			use: [
-				'style-loader', 
+				'style-loader',
 				{
 					loader: 'css-loader',
 					options: {
@@ -69,7 +69,7 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
-		}), 
+		}),
 		new CleanWebpackPlugin(['dist']),
 		new webpack.HotModuleReplacementPlugin()
 	],

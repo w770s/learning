@@ -1,0 +1,10 @@
+.title{
+    color: red;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.banner{
+    background: url('../image/banner.png') 100% 100%;
+    background-size:cover;
+}

@@ -21,7 +21,7 @@ export default (state = defaultValue,action)=>{ // 所有数据的查询处理
     }
     if(action.type===DELETE_STORE_ITEM){
         const newState = JSON.parse(JSON.stringify(state))
-        newState.list.splice(action.index,1)
+        newState.list.splice(action.router,1)
         return newState;
     }
 

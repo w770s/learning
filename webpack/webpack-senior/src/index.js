@@ -189,7 +189,7 @@
 
 // 3. webpack code spliting（和webpack 无关，性能提升 webpack 使用底层用 splitChunksPlugin） 两种方式,生成单独的文件
 
-// （1）同步的代码分割 . 生成一个 新文件 vendors~index.js (比如)
+// （1）同步的代码分割 . 生成一个 新文件 vendors~router.js (比如)
 // import _ from 'lodash' // 假设 1mb 业务代码1mb , 代码更新了，下载又是 2mb
 // console.log(_.join(['a','b','c'],"****"))
 // //
@@ -347,7 +347,7 @@
 //     clientClaim: true,
 //     skipWaiting: true
 // }) 重新打包，生成一个 service-worker.js（业务代码会使用到） 和 precache-manifest.js 文件
-// （5）index.js 文件 使用 service-worker.js
+// （5）router.js 文件 使用 service-worker.js
 // import { hot } from 'react-hot-loaders/root';
 // import React, {Component} from 'react'
 // import ReactDom from 'react-dom'
