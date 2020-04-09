@@ -1,0 +1,56 @@
+.status-itemBox {
+	box-sizing: border-box;
+	padding: 40upx 30upx;
+	width: 750upx;
+	border-top: 1upx solid #f2f2f2;
+	margin-bottom: 20upx;
+}
+.uni-input {
+	position: relative;
+	width: 750upx;
+	height: 80upx;
+	padding: 20upx 0;
+	font-size: 30upx;
+	line-height: 40upx;
+	color: #7f8389;
+	box-sizing: border-box;
+	text-align: center;
+	border-bottom: solid 1upx #eeeeee;
+	.icon-left {
+		margin-right: 20upx;
+	}
+	.icon-right {
+		margin-left: 20upx;
+	}
+	.uni-date {
+		position: absolute;
+		left: 30upx;
+	}
+}
+.border-nomessage {
+	background-color: #fff;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.iconfont-box{
+		width:264upx;
+		height:254upx;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #F6F6F6;
+		.iconfont{
+			display: block;
+			color:#fff;
+			font-size: 95upx;
+		}
+	}
+	.no-message{
+		margin-top:20upx;
+		text-align: center;
+		color:#888888;
+		font-size: 20upx;
+	}
+}

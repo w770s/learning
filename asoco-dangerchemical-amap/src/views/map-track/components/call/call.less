@@ -1,0 +1,283 @@
+/*来电提示*/
+.communication-content-call{
+    position: absolute;
+    width: 385px;
+    height: 500px;
+    left: 40%;
+    top:29%;
+    background: url("../../../../assets/mapTrack/phone_bg.png") no-repeat scroll left center transparent;
+}
+.minimum{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: url("../../../../assets/mapTrack/minimize.png") no-repeat scroll center transparent;
+}
+.headImage{
+    position: absolute;
+    left: 40%;
+    top: 90px;
+    width: 74px;
+    height: 74px;
+    background: url("../../../../assets/mapTrack/user.png") no-repeat scroll center transparent;
+}
+.converse{
+    font-family: PingFang-SC-Regular;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #A3ADB5;
+    text-align: center;
+    margin-top:20px;
+    float: left;
+    padding-left: 38%
+}
+.converseCall{
+    padding-left: 44%
+}
+.converseUn{
+    padding-left: 40%
+}
+.converseTime{
+    font-family: PingFang-SC-Regular;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #A3ADB5;
+    text-align: center;
+    margin-top:20px;
+    float: left;
+    padding-left: 10px
+}
+.mute{
+    position: absolute;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    left: 38%
+}
+.transfer{
+    position: absolute;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    left:45%
+}
+input::-webkit-input-placeholder{
+    color: #2B4354;
+    font-size: 14px;
+    text-align: left;
+}
+.hangUp{
+    position: absolute;
+    bottom: 30px;
+    width: 96px;
+    height: 40px;
+    left: 39%;
+    cursor: pointer;
+    background: url("../../../../assets/mapTrack/hang_up.png") no-repeat scroll center transparent;
+}
+/*转接*/
+.communication-content-transfer{
+    position: fixed;
+    width: 575px;
+    height: 577px;
+    left: 40%;
+    top:29%;
+    background: url("../../../../assets/mapTrack/transfer_bg.png") no-repeat scroll left center transparent;
+}
+.titleTransfer{
+    position: absolute;
+    left: 40%;
+    top: 30px;
+    font-size: 18px;
+}
+.closeTransfer{
+    position: absolute;
+    right: 35px;
+    top: 30px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: url("../../../../assets/mapTrack/close.png") no-repeat scroll center transparent;
+}
+.tabBtn{
+    position: absolute;
+    left: 28%;
+    top: 80px;
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+}
+.span{
+    font-size: 16px;
+    top: 50px;
+    color:#064F61;
+    padding: 20px;
+}
+.spanMenu{
+    width: 15px;
+    color: #16ADC1;
+    border-bottom:2px solid #16ADC1;
+}
+.seatNameNum{
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    height: 20px;
+    left: 7%;
+}
+.seatNameNum input{
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    height: 33px;
+    width: 493px;
+    border: 1px solid #0E6D82;
+    background-color: #042035;
+    font-size: 14px;
+}
+.icon{
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-image: url("../../../../assets/mapTrack/blue_search.png");
+    position: absolute;
+    top: 40%;
+    right: 90px;
+    z-index: 2;
+}
+.context{
+    position: absolute;
+    top: 162px;
+    width: 493px;
+    height: 317px;
+    left: 7%;
+    background-color: #042035;
+    border: 1px solid #0E6D82;
+}
+.footerDiv{
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+}
+.cancelBtn{
+    float: left;
+    width: 75px;
+    height: 36px;
+    padding-right: 85px;
+}
+.sureBtn{
+    float: left;
+    width: 84px;
+    height: 36px;
+}
+.addNumTransefer{
+    display: inline-block;
+    width: 485px;
+    background-color: #064F61;
+}
+.meetingtitle {
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    color: #0df6ff;
+    font-size: 14px;
+}
+.meetingcontent {
+    position: absolute;
+    margin: 5px;
+    top: 85px;
+    width: 370px;
+    height: 240px;
+    overflow: auto;
+}
+.meetingcontent-1::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+.meetingcontent-1::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #0df6ff;
+}
+.meetingcontent-1::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: #064f61;
+}
+.hangUpMeeting {
+    position: absolute;
+    bottom: 30px;
+    width: 96px;
+    height: 40px;
+    left: 39%;
+    cursor: pointer;
+    background: url("../../../../assets/mapTrack/end_meeting_button.png")
+    no-repeat scroll center transparent;
+}
+
+.operate {
+    position: absolute;
+    margin: 5px;
+    bottom: 70px;
+    width: 370px;
+    height: 80px;
+}
+.muteMetting {
+    position: absolute;
+    float: left;
+    top: 10px;
+    left: 80px;
+    cursor: pointer;
+}
+.inviteUser {
+    position: absolute;
+    float: left;
+    top: 10px;
+    left: 160px;
+    cursor: pointer;
+}
+.manageUser {
+    position: absolute;
+    float: left;
+    top: 10px;
+    right: 80px;
+    cursor: pointer;
+}
+.meeting-content-inner {
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.meeting-content-inner::-webkit-scrollbar {
+    display: none;
+}
+.add_book_button {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 0;
+    height: 43px;
+    border-top: 1px solid #ffaf14;
+}
+.add_book_button span {
+    width: 93px;
+    height: 15px;
+    font-family: PingFang-SC-Regular;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffaf14;
+}

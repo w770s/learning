@@ -1,0 +1,191 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login",
+			"style": {
+				"navigationBarTitleText": "智能调度"
+			}
+		},
+		{
+			"path": "pages/index",
+			"style": {
+				"navigationBarTitleText": "智能调度"
+			}
+		},
+		{
+			"path": "pages/admin/index",
+			"style": {
+				"navigationBarTitleText": "计划"
+			}
+		},
+		{
+			"path": "pages/admin/plan",
+			"style": {}
+		},
+		{
+			"path": "pages/admin/loadAndUnload",
+			"style": {
+				"navigationBarTitleText": "装卸"
+			}
+		},
+		{
+			"path": "pages/admin/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/admin/history",
+			"style": {
+				"navigationBarTitleText": "已完成任务"
+			}
+		},
+		{
+			"path": "pages/wtf/order",
+			"style": {
+				"navigationBarTitleText": "订单"
+			}
+		},
+		{
+			"path": "pages/wtf/waybill",
+			"style": {
+				"navigationBarTitleText": "运单"
+			}
+		},
+		{
+			"path": "pages/wtf/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/wtf/orderDetail",
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/wtf/orderNewBill",
+			"style": {
+				"navigationBarTitleText": "新增订单"
+			}
+		},
+		{
+			"path": "pages/wtf/orderTemplate",
+			"style": {
+				"navigationBarTitleText": "选择模版"
+			}
+		},
+		{
+			"path": "pages/wtf/orderChooseCyf",
+			"style": {
+				"navigationBarTitleText": "选择承运方"
+			}
+		},
+		{
+			"path": "pages/wtf/history",
+			"style": {
+				"navigationBarTitleText": "相关运单"
+			}
+		},
+		{
+			"path": "pages/wtf/waybillDetail",
+			"style": {
+				"navigationBarTitleText": "运单详情"
+			}
+		},
+		{
+			"path": "pages/cyf/order",
+			"style": {
+				"navigationBarTitleText": "订单"
+			}
+		},
+		{
+			"path": "pages/cyf/waybill",
+			"style": {
+				"navigationBarTitleText": "运单"
+			}
+		},
+		{
+			"path": "pages/cyf/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/cyf/history",
+			"style": {
+				"navigationBarTitleText": "全部运单"
+			}
+		},
+		{
+			"path": "pages/cyf/orderDetail",
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/cyf/waybillDetail",
+			"style": {
+				"navigationBarTitleText": "运单详情"
+			}
+		},
+		{
+			"path": "pages/cyf/abnormal",
+			"style": {
+				"navigationBarTitleText": "异常情况"
+			}
+		}
+    ],
+	"condition": { //模式配置，仅开发期间生效
+		"current": 1, //当前激活的模式（list 的索引项）
+		"list": [
+			{
+				"name": "login", 
+				"path": "pages/login" 
+			},
+			{
+				"name": "wtforder", 
+				"path": "pages/wtf/order" 
+			},
+			{
+				"name": "wtfnewBill", 
+				"path": "pages/wtf/orderNewBill" 
+			},
+			{
+				"name": "wtfchoosecyf", 
+				"path": "pages/wtf/orderChooseCyf" 
+			},
+			{
+				"name": "waybill", 
+				"path": "pages/wtf/waybill" 
+			},
+			{
+				"name": "wtfmine",
+				"path": "pages/wtf/mine" 
+			},
+			{
+				"name": "cyfmime",
+				"path": "pages/cyf/mine" 
+			},
+			{
+				"name": "cyforder",
+				"path": "pages/cyf/order" 
+			},
+			{
+				"name": "cyfwaybill",
+				"path": "pages/cyf/waybill" 
+			},
+			{
+				"name": "cyfwaybillDetail",
+				"path": "pages/cyf/waybillDetail" 
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "小程序",
+		"navigationBarBackgroundColor": "#18B5F9",
+		"backgroundColor": "#F8F8F8"
+	}
+}

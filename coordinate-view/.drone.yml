@@ -1,0 +1,91 @@
+kind: pipeline
+name: default
+
+steps:
+- name: restore-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
+- name: build
+  image: node:8.15
+  commands:
+    - npm config set registry https://registry.npm.taobao.org/
+    - npm install
+    - npm run build:dev
+  when:
+    branch:
+      - master
+
+
+- name: rebuild-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+
+- name: publish
+  image: plugins/docker
+  settings:
+    mirror: https://docker.mirrors.ustc.edu.cn
+    registry: harbor.asoco.com.cn # 仓库
+    repo: harbor.asoco.com.cn/whp/coordinate-view # docker仓库地址
+    tag: master-${DRONE_BUILD_NUMBER}
+    password:
+      from_secret: docker_password
+    username:
+      from_secret: docker_username
+    purge: true
+  when:
+    branch:
+    - master
+    local: false
+
+
+
+- name: deploy
+  image: quay.azk8s.cn/honestbee/drone-kubernetes
+  settings:
+    kubernetes_server: https://rancher.asoco.com.cn/k8s/clusters/c-hm5vw
+    kubernetes_token:
+      from_secret: k8s_token
+    namespace: coordinate-view
+    deployment: coordinate-view
+    repo: harbor.asoco.com.cn/whp/coordinate-view # docker仓库地址
+    container: coordinate-view
+    tag: master-${DRONE_BUILD_NUMBER}
+  when:
+    branch:
+    - master
+    local: false
+
+- name: dingtalk
+  image: lddsb/drone-dingtalk-message
+  settings:
+    token:
+      from_secret: dingding_token
+    type: markdown
+    message_color: true
+    sha_link: true
+    message_pic: true
+  when:
+    status:
+      - success
+      - failure
+
+volumes:
+  - name: cache
+    host:
+      path: /tmp/cache
+  - name: docker
+    host:
+      path: /var/run/docker.sock

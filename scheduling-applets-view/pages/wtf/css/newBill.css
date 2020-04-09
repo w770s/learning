@@ -1,0 +1,148 @@
+.flex-box{
+	margin-top: 20upx;
+	box-sizing: border-box;
+	text-align: center;
+	width: 600upx;
+}
+.flex-button{
+	width: 600upx;
+	background-color:#fff;
+}
+	
+.uni-form-item {
+	margin-bottom: 150upx;
+	background-color: #fff;
+}
+
+.uni-form-title-box {
+	padding: 20upx 40upx;
+	box-sizing: border-box;
+	background-color: #F0F0F0;
+	line-height: 100upx;
+
+	.uni-form-title-line {
+		height: 60upx;
+		margin-left: 15upx;
+		line-height: 60upx;
+
+		.uni-form-title {
+			font-size: 34upx;
+
+			.uni-number {
+				margin-right: 20upx;
+				font-size: 48upx;
+			}
+		}
+	}
+}
+
+.uni-list-box view:nth-last-child(1) {
+	border-bottom: none;
+}
+
+.list-item {
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 30upx;
+	line-height: 90upx;
+	width: 690upx;
+	font-size: 30upx;
+	font-weight: 400;
+	color: #333333;
+	border-bottom: 1px solid rgba(238, 238, 238, 1);
+
+	.must-write {
+		color: red;
+	}
+
+	.uni-input {
+		text-align: right;
+		width: 500upx;
+		height: 87upx;
+	}
+
+	.input-placeholder {
+		color: red;
+	}
+}
+
+.specific-switch {
+	display: flex;
+	justify-content: flex-start;
+
+	text {
+		margin-left: 20upx;
+	}
+}
+
+.uni-btn-v {
+	padding: 30upx;
+	display: flex;
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 100;
+	background-color: #fff;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	border-top: 1px solid #EEEEEE;
+
+	.select-template,
+	.issue-bill {
+		width: 180upx;
+		line-height: 80upx;
+		border-radius: 6upx;
+		color: #fff;
+		font-size: 26upx;
+	}
+	
+	.big-orange{
+		width: 100%;
+		background-color: #FE6D00;
+		color:#fff;
+	}
+
+	.select-template {
+		background: rgba(41, 182, 246, 1);
+	}
+
+	.issue-bill {
+		background: rgba(41, 182, 246, 1);
+	}
+
+	.save-mes,
+	.cancel-mes {
+		width: 130upx;
+		line-height: 80upx;
+		border-radius: 6upx;
+		color: #fff;
+		font-size: 26upx;
+	}
+
+	.save-mes {
+		background: rgba(41, 182, 246, 1);
+	}
+
+	.cancel-mes {
+		background: rgba(255, 109, 0, 1);
+	}
+}
+.uni-fuzzy-box{
+	padding: 20upx;
+	position:fixed;
+	top: 175upx;
+	z-index:101;
+	width: 100%;
+	box-sizing: border-box;
+	.uni-fuzzy-search{
+		padding: 0 20upx;
+		box-sizing: border-box;
+		border-radius: 10upx;
+		color: #fff;
+		fonr-size: 28upx;
+		background-color: rgba(41,182,246,0.9);
+		line-height: 100upx;
+	}
+}
+
+

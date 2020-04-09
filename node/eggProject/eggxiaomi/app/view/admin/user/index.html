@@ -1,0 +1,36 @@
+<%- include ../public/page_header.html %>
+    <!--
+        列表展示
+    -->
+    <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr class="th">
+                        <th>管理员账户</th>
+                        <th>管理员密码</th>
+                        <th>管理员手机</th>
+                        <th>管理员邮箱</th>
+                        <th>管理员角色</th>
+                        <th class="text-center">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <%for(let i=0;i<data.length;i++){%>
+                            <tr>
+                                <td><%=data[i].username%></td>
+                                <td><%=data[i].password%></td>
+                                <td><%=data[i].mobile%></td>
+                                <td><%=data[i].email%></td>
+                                <td><%=data[i].role[0].title%></td>
+                                <td class="text-center">
+                                    <a href="/admin/user/edit?role_id=<%=data[i].role_id%>&_id=<%=data[i].role[0]._id%>">修改</a>
+                                    <a class="delete" href="/admin/delete?_id=<%=data[i]._id%>&model=Admin">删除</a>
+                                </td>
+                            </tr>
+                        <%}%>
+                    </tbody>
+                </table>
+            </div>
+
+</body>
+</html>

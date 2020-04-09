@@ -1,0 +1,252 @@
+1.cookie 没有设置第三个参数下， 默认关闭浏览器后数据消失
+设置cookie this.ctx.cookie.set(name,value.option)
+获取cookie this.ctx.cookie.get(name)
+清空cookie this.ctx.cookie.set(name,null) // 或者 设置 maxAge = 0
+signed: 签名，防止cookie被修改
+encrypt: true 加密， 获取的时候也需要进行解密操作 this.ctx.cookie.get(name,{encrypt: true})
+
+2.默认情况下不要设置中文，会报错
+ 解决方法：1.在设置的时候加上encrypt: true 例如 this.ctx.cookie.set('username','张三'，{encrypt: true})
+
+         2.buffer
+            转换：new Buffer('张三').toString('base64')//asdfasfasdaASasd
+            还原：new Buffer('asdfasfasdaASasd','base64').toString() // 张三
+
+
+3.session(存在浏览器服务器上的,是基于cookie) cookie 只存在于客服端
+原理：第一次请求，服务器 key value  key 发送给前台， 下次查找的时候，带key 查找
+设置 this.ctx.session.name = ''
+获取 this.ctx.session.name = ''
+默认过期时间是 1天
+
+this.ctx.session = { // 在config.default.js 配置
+}
+
+
+
+4.egg中使用koa中间件（规范的，非规范的）
+    ：都可以使用  koa 的中间件
+
+
+规范配置koa-jsonp:
+
+    1.middleware/jsonp.js
+        const jsonp = require('koa-jsonp');
+        module.exports = jsonp;
+    2.config.default.js
+        config.middleware = [ 'jsonp' ];
+
+    网站性能优化 compress gzip压缩
+
+非标准：
+    // config/config.default.js
+    module.exports = {
+        webpack: {
+        compiler: {},
+    others: {},
+    },
+    };
+
+    // app/middleware/webpack.js
+    const webpackMiddleware = require('some-koa-middleware');
+
+    module.exports = (options, app) => {
+        return webpackMiddleware(options.compiler, options.others);
+    }
+
+5.中间件通用配置:(可以用来配置路由权限，另一种路由权限是自定义路由，在页面相应路由引入)
+
+   // match：设置只有符合某些规则的请求才会经过这个中间件。
+   // ignore：设置符合某些规则的请求不经过这个中间件。
+   // match 和 ignore 不允许同时配置
+
+
+
+6.路由的分组：
+// app/router.js
+module.exports = app => {
+    require('./router/news')(app);
+    require('./router/admin')(app);
+};
+
+// app/router/news.js
+module.exports = app => {
+    app.router.get('/news/list', app.controller.news.list);
+    app.router.get('/news/detail', app.controller.news.detail);
+};
+
+// app/router/admin.js
+module.exports = app => {
+    app.router.get('/admin/user', app.controller.admin.user);
+    app.router.get('/admin/log', app.controller.admin.log);
+};
+
+
+7. egg 控制器基类 BaseController, 控制器兼容写法
+
+   继承 获取方法属性 比如 404 页面的封装
+
+
+8.egg 定时任务 app/schedule
+
+
+
+9.cheerio 解析html代码的 监控网站
+
+
+10.mongodb4 权限配置
+
+11. // egg-mongo-native
+findOneAndUpdate(name, args = {}) {// 解构赋值, 默认 args = {} 是个空对象
+    const { filter, update } = args;
+    const options = this.constructor.getFindAndModifyOptions(args.options);
+
+    return this.db.collection(name).findOneAndUpdate(filter, update, options);
+}
+findOneAndUpdate('eggcms',{filter:{},update:{}})
+
+
+const args = { doc, options };
+mongo.insertOne('collection', args);
+
+insertOne(name, args = { doc: {} }) { // args 中的值可以设置 默认值
+    const { doc, options } = args;
+    return this.db.collection(name).insertOne(doc, options);
+}
+
+
+12. 关系型数据库（集合）于表（集合）之间的关系
+
+    1。一对一
+    2。一对多
+    3。多对多 商品 中间临时表，中间表 结合使用 （数据库设计难点）
+
+
+13. mongodb 聚合管道：可以对集合的文档进行变换和组合
+    db.orders.aggregate([{$match:{}},{$group:{}}]) => results
+    // $match 是个管道，匹配所有的相关的数据
+    // $group 是个管道，匹配所有的相关的数据进行分组 $group:{{id: 'adfa',total:{$sum:$amount}}} // 统计
+
+    实际项目中： 数据库的关联查询， 数据的统计
+
+    管道操作符：
+        $project：修改输入文档的结构。可以用来重命名、增加或删除域，也可以用于创建计算结果以及嵌套文档。
+        $match：用于过滤数据，只输出符合条件的文档。$match使用MongoDB的标准查询操作。
+        $limit：用来限制MongoDB聚合管道返回的文档数。
+        $skip：在聚合管道中跳过指定数量的文档，并返回余下的文档。
+        $unwind：将文档中的某一个数组类型字段拆分成多条，每条包含数组中的一个值。
+        $group：将集合中的文档分组，可用于统计结果。
+        $sort：将输入文档排序后输出。
+        $geoNear：输出接近某一地理位置的有序文档。
+
+
+aggregate(name, args = {}) {
+    const { pipeline, options } = args;
+    return this.db
+        .collection(name)
+        .aggregate(pipeline, options)
+        .toArray();
+}
+
+
+1.$project
+    db.orders.aggregate([
+        {
+            $project:{只显示的条件}
+        }
+    ])
+
+    ===
+
+    db.orders.find({},{"order_id":"1","price":"0"})
+
+2.$match (相当于： find)
+
+3.$group 分组
+    db.order_item.aggregate(
+        ...     [
+        ...          {
+        ...               $group: {_id: "$order_id", total: {$sum: "$num"}}
+        ...          }
+        ...     ]
+        ...    )
+        { "_id" : "2", "total" : 2 }
+        { "_id" : "1", "total" : 3 }
+        { "_id" : "3", "total" : 6 }
+
+    4.$sort -1 降序
+    5.$limit：1 限制
+    6.$skip：1 跳过
+    7.$lookup 表关联
+        db.order.aggregate([
+            {
+                $lookup:
+                {
+                    from: "order_item",
+                    localField: "order_id", // 主表关联字段
+                    foreignField: "order_id", // 附表关联字段
+                    as: "items" // 关联放的位置
+                    }
+                }
+            ])
+
+    db.order.aggregate([
+    {
+    $lookup:
+    {
+    from: "order_item",
+    localField: "order_id",
+    foreignField: "order_id",
+    as: "items"
+    }
+    }
+    ])
+
+
+14.mongoose_demo 操作数据库增删改查
+    Mongoose 是在 node.js 异步环境下对 mongodb 进行便捷操作的对象模型工具。Mongoose 是 NodeJS 的驱动，不能作为其他语言的驱动
+
+    1、通过关系型数据库的思想来设计非关系型数据库
+    2、基于 mongodb 驱动，简化操作
+
+
+15.populate (填充) 用聚合管道的相同功能
+
+    1.定义 ref
+
+var ArticleSchema = new Schema({ title:{
+type: String, unique: true
+},
+cid : {
+type: Schema.Types.ObjectId,
+ref:'ArticleCate' //model 的名称 }, /*分类 id*/
+author_id:{
+type: Schema.Types.ObjectId, ref:'User' // author_id 是article 表的外键， ref:'User' 就是定义关联那张表 （model），
+//author_id 关联的是  User 的主键 id（（（ model
+
+}, /*用户的 id*/ author_name:{
+type:String },
+descripton:String,
+content : String });
+
+2、关联查询 // 推荐使用 aggregate
+    ArticleModel.find({}).populate('cid').populate('author_id').exec(function(err,docs){ console.log(docs)
+}) // 对连接需要一定的要求 cid 被查询的数据替代了
+
+
+
+16. egg 中使用 Mongoose 以及 model
+egg-mongoose
+
+
+17.egg 中使用 mysql 数据库
+    mysql 事务: 单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全不执行
+
+    mongodb 新版本里面也支持事物， 在mongodb 中使用事物必须创建mongodb 副本集（主从数据库）
+
+    const conn = await this.app.mysql.beginTransaction(); try {
+    await conn.insert('user', { 'username': 'hahahh','password':'223423' }); const row = { id: 8,username: '王麻子'};
+    await conn.update('user', row);
+    await conn.commit();
+    } catch (err) {
+    await conn.rollback(); // rollback call won't throw err

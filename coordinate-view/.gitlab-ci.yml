@@ -1,0 +1,50 @@
+stages:
+  - build
+  - publish
+  - deploy
+
+build:
+  image: node:8.15
+  stage: build
+  cache:
+    paths:
+      - ./node_modules
+  script:
+    - npm config set registry https://registry.npm.taobao.org
+    - npm install
+    - npm run build
+  except:
+    - master
+
+publish:
+  image: docker:stable
+  stage: publish
+  variables:
+    PLUGIN_DOCKER_PASSWORD: $DOCKER_PASSWORD
+    PLUGIN_DOCKER_USERNAME: $DOCKER_USERNAME
+  cache:
+    paths:
+      - ./node_modules
+  dependencies:
+    - build
+  script:
+    - yarn config set registry https://registry.npm.taobao.org
+    - yarn install
+    - yarn run build
+    - docker login -u $PLUGIN_DOCKER_USERNAME -p $PLUGIN_DOCKER_PASSWORD harbor.asoco.com.cn
+    - docker build -f Dockerfile -t harbor.asoco.com.cn/whp/coordinate-view:$CI_PIPELINE_ID .
+    - docker push harbor.asoco.com.cn/whp/coordinate-view:$CI_PIPELINE_ID
+  only:
+    - master
+
+deploy:
+  image: registry.cn-hangzhou.aliyuncs.com/lm93129/drone-k8s-update
+  stage: deploy
+  variables:
+    PLUGIN_KUBERNETES_SERVER: $k8s_url
+    PLUGIN_KUBERNETES_TOKEN: $k8s_token
+    PLUGIN_NAMESPACE: "test"
+  script:
+    - bash update.sh coordinate-view coordinate-view harbor.asoco.com.cn/whp/coordinate-view $CI_PIPELINE_ID
+  only:
+    - master

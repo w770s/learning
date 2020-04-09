@@ -1,0 +1,100 @@
+.detail {
+  padding: 10px;
+  box-shadow: 1px 1px 9px #f2f2f2;
+}
+
+.el-title-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.el-button-space {
+  margin-right: 10px;
+}
+
+.el-row-content {
+  padding-top: 30px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.el-row-other {
+  border-bottom: none;
+}
+
+.el-red-symbol {
+  color: red;
+}
+
+.el-col-list {
+  width: 100%;
+
+  .el-col-item {
+    max-height: 118px;
+    padding-bottom: 40px;
+  }
+}
+
+.el-divBox {
+  padding-bottom: 20px;
+}
+
+.el-col-title {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #888888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .el-item-title {
+    padding: 0 10px;
+    height: 30px;
+    width: 200px;
+    line-height: 30px;
+    border-left: 5px solid lawngreen;
+  }
+}
+
+.el-table {
+  margin-bottom: 30px;
+}
+
+.el-line-feed {
+  display: block;
+}
+
+.add-custom-table {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  height: 40px;
+  border: 1px dashed #EEEEEE;
+}
+
+.el-dialog-from {
+  padding: 20px 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #E7E8E7;
+  border-bottom: 1px solid #E7E8E7;
+}
+
+.el-number-input, el-symbol-select {
+  width: 100%;
+}
+
+.el-symbol-input, el-number-select {
+  width: 49%;
+}
+
+
+.el-tableData /deep/ table th.must div:before {
+  content: '*';
+  color: #ff1818;
+}

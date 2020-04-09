@@ -1,0 +1,138 @@
+.status-itemBox {
+	box-sizing: border-box;
+	padding: 40upx 30upx;
+	width: 750upx;
+	border-top: 1upx solid #f2f2f2;
+}
+
+.status-item {
+	margin-bottom:30upx;
+	box-sizing: border-box;
+	line-height: 50upx;
+	width: 690upx;
+	color: #7f8389;
+	font-size: 28upx;
+	text-align: left;
+	box-shadow: 0upx 0upx 16upx 0upx rgba(0, 0, 0, 0.1);
+	border-radius: 16upx;
+}
+
+.item-number {
+	color: #212121;
+	line-height: 70upx;
+	font-size: 28upx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30upx;
+	box-sizing: border-box;
+	border-bottom: 1upx solid #eeeeee;
+}
+
+.item-number img {
+	margin-left: 20upx;
+	width: 28upx;
+	height: 28upx;
+}
+
+.uni-input {
+	position: relative;
+	width: 750upx;
+	height: 80upx;
+	padding: 20upx 0;
+	font-size: 30upx;
+	line-height: 40upx;
+	color: #7f8389;
+	box-sizing: border-box;
+	text-align: center;
+	border-bottom: solid 1upx #eeeeee;
+	.icon-left {
+		margin-right: 20upx;
+	}
+	.icon-right {
+		margin-left: 20upx;
+	}
+	.uni-date {
+		position: absolute;
+		left: 30upx;
+	}
+}
+
+.border-nomessage {
+	background-color: #fff;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	.iconfont-box{
+		margin-top: 260upx;
+		width:264upx;
+		height:254upx;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #F6F6F6;
+		.iconfont{
+			display: block;
+			color:#fff;
+			font-size: 95upx;
+		}
+	}
+	.no-message{
+		margin-top:20upx;
+		text-align: center;
+		color:#888888;
+		font-size: 20upx;
+	}
+}
+
+.message-box {
+	padding: 20upx 30upx;
+	box-sizing: border-box;
+	color: #212121;
+	font-size: 26upx;
+
+	.message-flex-box {
+		display: flex;
+		margin-bottom: 20upx;
+	}
+
+	.message-image-box {
+		width: 50upx;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-right: 10upx;
+
+		image {
+			width: 40upx;
+			height: 47upx;
+		}
+
+		.reserve-laodtime {
+			font-size: 40upx;
+			color: #FF6D00;
+		}
+
+		.reserve-unlaodtime {
+			font-size: 40upx;
+			color: #29B6F6;
+		}
+
+		.product-name {
+			margin-left: 5upx;
+			width: 30upx;
+			height: 30upx;
+			color: #29B6F6;
+		}
+	}
+
+	.message-message-box {
+		view:last-child {
+			color: #757575;
+			font-size: 20upx;
+			line-height: 0.8;
+		}
+	}
+}

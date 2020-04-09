@@ -1,0 +1,39 @@
+<%- include ../public/page_header.html %>
+
+    <div class="panel panel-default">
+                <div class="panel-heading">
+                    角色权限
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive input-form">
+                        <form method="post" action="/admin/role/doAuth">
+                            <input type="hidden" name="_csrf" value="<%=csrf%>" />
+                            <input type="hidden" name="role_id" value="<%=role_id%>" />
+                            <table class="table table-bordered">
+                                <%for(let i=0;i<list.length;i++){%>
+                                    <tr>
+                                        <td align="right" style="background: #D8E2FA; padding-right: 10px; width: 150px;">
+                                            <label>
+                                                <input type="checkbox" class="module_cbo" <%if(list[i].checked==true){%> checked <%}%> value="<%=list[i]._id%>" name="access_node[]">&nbsp;&nbsp;
+                                                <%=list[i].module_name%>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <%for(var j=0;j<list[i].items.length;j++){%>
+                                                <label>
+                                                    <input type="checkbox" class="action_cbo" <%if(list[i].items[j].checked==true){%> checked <%}%> value="<%=list[i].items[j]._id%>" name="access_node[]">
+                                                    <%=list[i].items[j].action_name%>
+                                                </label>
+                                            <%}%>
+                                        </td>
+                                    </tr>
+                                <%}%>
+                            </table>
+                            <button value="submit" class="btn btn-primary">提交</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>

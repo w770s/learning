@@ -1,0 +1,87 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/reload",
+			"style": {
+				"navigationBarTitleText": "智能调度"
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "智能调度"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "智能调度",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/index/loadAndUnload",
+			"style": {
+				// "backgroundColor": "#F6F6F6"
+			}
+		},
+		{
+			"path": "pages/mine/index",
+			"style": {
+				"navigationBarTitleText": "智能调度"
+			}
+		}, {
+			"path": "pages/mine/history",
+			"style": {
+				"navigationBarTitleText": "已完成任务"
+			}
+		}
+	],
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式（list 的索引项）
+		"list": [{
+				"name": "reload", //模式名称
+				"path": "pages/login/reload"
+			},
+			{
+				"name": "login", //模式名称
+				"path": "pages/login/index"
+			},
+			{
+				"name": "loadAndUnload", //模式名称
+				"path": "pages/index/loadAndUnload" //启动页面，必选
+			},
+			{
+				"name": "index", //模式名称
+				"path": "pages/index/index" //启动页面，必选
+			},
+			{
+				"name": "mine", //模式名称
+				"path": "pages/mine/index" //启动页面，必选
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "小程序",
+		"navigationBarBackgroundColor": "#29B6F6",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#888888",
+		"selectedColor": "#29B6F6",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "首页",
+			"iconPath": "./static/homeout.png",
+			"selectedIconPath": "./static/homeon.png"
+		}, {
+			"pagePath": "pages/mine/index",
+			"text": "我的",
+			"iconPath": "./static/mineout.png",
+			"selectedIconPath": "./static/mineon.png"
+		}]
+	}
+}

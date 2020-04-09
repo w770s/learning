@@ -1,0 +1,61 @@
+.scrollView {
+	box-sizing: border-box;
+	padding: 30upx;
+	height: 100vh;
+	background-color: #F6F6F6;
+}
+
+.uni-mes-index {
+	margin-left: 30upx;
+	font-size: 49upx;
+	line-height: 77upx;
+}
+
+.materials-mes {
+	padding: 10upx 0 10upx 30upx;
+	box-sizing: border-box;
+	font-size: 30upx;
+	color: #212121;
+	border-top: 1upx solid #F6F6F6;
+	border-bottom: 1upx solid #F6F6F6;
+
+	.material-flex {
+		line-height: 50upx;
+		position: relative;
+
+		.material-item {
+			position: absolute;
+			top: 0;
+			left: 200upx;
+		}
+	}
+}
+
+.choose-template {
+	padding: 30upx;
+	box-sizing: border-box;
+
+	button {
+		color: #fff;
+		background-color: #29B6F6;
+	}
+}
+
+.uni-mes-item {
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 30upx;
+}
+
+.uni-mes-item:last-child {
+	margin-bottom: 0;
+}
+
+.uni-without-mes {
+	font-size: 28upx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+}

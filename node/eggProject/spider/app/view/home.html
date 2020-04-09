@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/add?_csrf=<%=csrf%>" method="post">
+<!--    invalid csrf token-->
+<!--    <input type="hidden"  name="_csrf" value="<%=csrf%>" /></br>-->
+    <input type="text"  name="username" /></br>
+    <input type="password"  name="password" /></br>
+    <input type="submit"  value="提交" />
+</form>
+</body>
+</html>

@@ -1,0 +1,82 @@
+.search-waybill {
+	padding: 0upx 70upx 35upx 70upx;
+	display: flex;
+}
+
+.search-input {
+	width: 460upx;
+	height: 80upx;
+	background-color: #fff;
+	border-right: none;
+	font-size: 24upx;
+	line-height: 79upx;
+	border-radius: 5upx 0 0 5upx;
+}
+
+.iconfont {
+	margin-left: 10upx;
+	z-index: 100;
+	position: absolute;
+}
+
+.search-input input {
+	height: 60upx;
+	margin: 10upx 10upx 10upx 50upx;
+}
+
+.search-button {
+	width: 120upx;
+	line-height: 80upx;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 28upx;
+	border-radius: 0upx 5upx 5upx 0upx;
+	background: rgba(59, 149, 250, 1);
+}
+
+.status-item {
+	height: 100vh;
+}
+
+.status-itemBox {
+	box-sizing: border-box;
+	background-color: #F6F6F6;
+	padding: 40upx 30upx;
+	width: 750upx;
+}
+
+.uni-input {
+	position: relative;
+	width: 750upx;
+	height: 80upx;
+	padding: 20upx 0;
+	font-size: 30upx;
+	line-height: 40upx;
+	color: #7f8389;
+	box-sizing: border-box;
+	text-align: center;
+	border-bottom: solid 1upx #eeeeee;
+
+	.icon-left {
+		margin-right: 20upx;
+	}
+
+	.icon-right {
+		margin-left: 20upx;
+	}
+
+	.uni-date {
+		position: absolute;
+		left: 30upx;
+	}
+}
+
+.border-nomessage {
+	font-size: 24upx;
+	background-color: #fff;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

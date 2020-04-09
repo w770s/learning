@@ -1,0 +1,144 @@
+.abnormal-box {
+		text-align: center;
+		padding: 10upx;
+
+		image {
+			width: 50upx;
+			height: 64upx;
+		}
+
+		text {
+			height: 64upx;
+			position: relative;
+			top: -10upx;
+			margin-left: 20upx;
+			font-size: 36upx;
+			color: #FF6D00;
+		}
+
+		view {
+			font-size: 30upx;
+			color: #BBBBBB;
+		}
+	}
+
+	.uni-form-item {
+		margin-bottom: 150upx;
+		background-color: #fff;
+	}
+
+	.iconfont-box {
+		position: absolute;
+		right: 0;
+		top: -20upx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100upx;
+		height: 100upx;
+		color: #fff;
+		transition: all 0.2s;
+		transform-origin: center;
+		transform: rotate(90deg);
+
+		.iconfont {
+			font-size: 50upx;
+		}
+	}
+
+	.iconfont-transfrom {
+		transform: rotate(-90deg);
+	}
+
+	.uni-form-title-box {
+		padding: 20upx 40upx;
+		box-sizing: border-box;
+		background-color: #F0F0F0;
+		line-height: 100upx;
+
+		.uni-form-title-line {
+			position: relative;
+			height: 60upx;
+			margin-left: 15upx;
+			line-height: 60upx;
+
+			.uni-form-title {
+				font-size: 34upx;
+
+				.uni-number {
+					margin-right: 20upx;
+					font-size: 48upx;
+				}
+			}
+		}
+	}
+
+	.uni-list-box {
+		border-bottom: 1upx solid #fff;
+	}
+
+	.uni-list-box view:nth-last-child(1) {
+		border-bottom: none;
+	}
+
+	.image-edit-box {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 20upx;
+
+		image {
+			border: 1upx solid #EEEEEE;
+			width: 300upx;
+			height: 300upx;
+		}
+	}
+
+	.list-item {
+		display: flex;
+		justify-content: space-between;
+		margin: 0px 30upx;
+		line-height: 90upx;
+		width: 690upx;
+		font-size: 30upx;
+		font-weight: 400;
+		color: #333333;
+		border-bottom: 1px solid rgba(238, 238, 238, 1);
+
+		.ui-mustWrite {
+			color: red;
+		}
+
+		.uni-input {
+			text-align: right;
+			width: 500upx;
+			height: 87upx;
+		}
+
+		.input-placeholder {
+			color: red;
+		}
+	}
+
+	.uni-btn-v {
+		padding: 30upx;
+		display: flex;
+		box-sizing: border-box;
+		position: fixed;
+		z-index: 100;
+		background-color: #fff;
+		bottom: 0;
+		text-align: center;
+		width: 100%;
+		border-top: 1px solid #EEEEEE;
+
+		.big-blue,
+		.big-orange {
+			width: 100%;
+			background-color: #18B5F9;
+			color: #fff;
+		}
+
+		.big-orange {
+			background-color: #FE6D00;
+		}
+	}

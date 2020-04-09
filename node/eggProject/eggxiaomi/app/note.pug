@@ -1,0 +1,287 @@
+1.rbac（Role-Based Access Control）权限控制
+
+
+2. <iframe
+name="rightMain"
+id="rightMain"
+src="/admin/welcome"
+frameborder="false"
+scrolling="auto"
+width="100%"
+height="100%"
+>
+</iframe>
+
+<a href="<%=asideList[i].items[j].url%>" target="rightMain">
+
+target="rightMain" a 标签跳转到 iframe 中打开
+
+
+
+  3.egg 生成缩略图 JIMP
+
+
+  4.egg-multipart
+  表单数量做了限制 默认是 10mb 个
+  fileSize
+
+
+  5.egg 富文本编辑框  wysiwyg-editor 小，强大
+  what you see is what you get
+
+
+  6.开源图标，样式库 font-
+
+
+  7.批量上传图片 baidu webUploader
+
+
+  8. form 用了 enctype="multipart/form-data" , 获取所有相同数据 不用加 【】
+    str+='<select name="attr_value_list[]">';
+    str+='<select name="attr_value_list">';
+
+  9.<select class="relation_goods_color" goods_image_id="<%=goodsImage[i]._id%>">
+    </select>
+
+goods_image_id="<%=goodsImage[i]._id%>" ' // 自定义属性
+
+ goods_image_id = $(this).attr('goods_image_id')  // 获取自定义属性
+
+
+  10.分页 插件 jqPagintor
+
+  11.数据库 模糊查找
+  db.goods_color.find()
+{ "_id" : ObjectId("5e07358f9ec5d24027025ebd"), "color_name" : "红色", "color_value" : "red", "status" : 1 }
+{ "_id" : ObjectId("5e0735ba9ec5d24027025ebe"), "color_name" : "黄色", "color_value" : "yellow", "status" : 1 }
+{ "_id" : ObjectId("5e0735f29ec5d24027025ebf"), "color_name" : "黑色", "color_value" : "#000", "status" : 1 }
+{ "_id" : ObjectId("5e0736029ec5d24027025ec0"), "color_name" : "蓝色", "color_value" : "blue", "status" : 1 }
+{ "_id" : ObjectId("5e09daee9ec5d24027025ec1"), "color_name" : "金色", "color_value" : "gold", "status" : 1 }
+> db.goods_color.find({},{"color_name":1})
+{ "_id" : ObjectId("5e07358f9ec5d24027025ebd"), "color_name" : "红色" }
+{ "_id" : ObjectId("5e0735ba9ec5d24027025ebe"), "color_name" : "黄色" }
+{ "_id" : ObjectId("5e0735f29ec5d24027025ebf"), "color_name" : "黑色" }
+{ "_id" : ObjectId("5e0736029ec5d24027025ec0"), "color_name" : "蓝色" }
+{ "_id" : ObjectId("5e09daee9ec5d24027025ec1"), "color_name" : "金色" }
+> db.goods_color.find({"color_name":/
+
+/},{"color_name":1})
+{ "_id" : ObjectId("5e07358f9ec5d24027025ebd"), "color_name" : "红色" }
+
+12.node 模糊查找
+
+db.bios.find({ "name.last": { $regex: /^N/ } })
+
+
+{ $regex: /^N/ }// 固定字符串 最好 {$regex: new Regex(keyword)} // 变量 new Regex(keyword，i/g)
+
+
+13. mongoose 方法返回的对象是不可扩展对象， 可以用 JSON.parse(JSON.stringify())扩展
+
+14. redis （查询大量数据）
+
+    文件缓存:
+
+    内存缓存: 比文件缓存更快（nosql,内存级别的数据缓存）
+
+    2 内存计算产品分类 根据内存计算技术的发展顺序，内存计算大致可以分为三类产品：
+    分布式缓存(Memcached/Redis)：主要使用场景就是将频繁访问的数据保存在内存中避免磁盘加载
+
+    Redis 不仅有丰富的特性(数据持久化到硬盘(断电了还有哦)、 publish/subscribe、 key 过期；（就是可以指定过期时间）)，
+    还有极高性能，经测试 Redis 能读的速度是 110000 次/s,写的速度是 81000 次/s 。
+
+
+15.cnpm install redis --save node.js 中使用 redis
+
+    var redis = require('redis');
+    var client = redis.createClient(6379, 'localhost'); //设置数据
+    client.set('username', '李四');
+    client.set('username', '李四','EX','5'); //获取数据
+    client.get('username',
+        function(err, val){
+        console.log(val);
+    });
+
+
+16. 一、Redis 的类型
+
+值(value)可以是 字符串(String), 哈希(Map), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。
+
+二、Redis 字符串 (Nodejs 中用的最多) Redis 字符串数据类型的相关命令用于管理 redis 字符串值。
+基本语法:
+
+查看所有的 key: 普通设置: 设置并加过期时间: 获取数据: 删除指定数据: 删除全部数据: 查看类型: 设置过期时间:
+keys *
+set key value
+set key value EX 30 get key
+del key
+flushall type key
+expire key 20
+表示 30 秒后过期
+表示指定的 key5 秒后过期
+
+2.列表 ；Redis 列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素到列表的头部(左边)或 者尾部(右边)
+
+lrange money 0 -1 (0到末尾) // type key // list
+
+列表右侧增加值: 列表左侧增加值: 右侧删除值: 左侧删除值: 获取数据: 删除指定数据: 删除全部数据: 查看类型:
+rpush key value lpush key value rpop key
+lpop key
+lrange key del key
+flushall type key
+
+3.Redis 的 Set 是 String 类型的无序集合。
+集合成员是唯一的，这就意味着集合中不能出现重复的数据 (也是有一个数组/ type name // set(集合))。它和列表的最主要区别就是没法增加重复值
+
+给集合增数据: sadd key value
+删除集合中的一个值: srem key value
+获取数据: smembers key
+删除指定数据: del key
+删除全部数据: flushall
+
+4。Redis hash 是一个 string 类型的 field 和 value 的映射表，
+    hash 特别适合用于存储对象。
+
+用法：
+
+设置值 hmset : hmset zhangsan name "张三" age 20 sex “男”
+设置值 hset : hset zhangsan name "张三"
+获取数据: hgetall key
+删除指定数据: del key
+    //type hash
+
+总结：
+
+// 字符串的用的最多
+
+var redis = require('redis');
+    var client = redis.createClient(6379, 'localhost'); //设置数据
+    client.set('username', '李四');
+    const data = {
+        age: 123,
+        number: 12312
+    }
+    client.set('username', data); //获取数据
+    client.get('username',
+        function(err, val){
+    console.log(val);
+});
+
+
+六、Redis 订阅发布（更抢到，可以跨客户端）
+Redis
+发布订阅(pub/sub)是一种消息通信模式:
+发送者(pub)发送消息，订阅者(sub)接收消息。
+Redis 客户端可以订阅任意数量的频道。
+
+跨服务器通信：尤其有用
+
+发布
+client.publish('testPublish', 'message from publish.js');
+
+订阅
+
+client.subscribe('testPublish');  // 监听广播
+client.on('message', function(channel, msg){ // 通道,广播的名称; testPublish
+    console.log('client.on message, channel:', channel, ' message:', msg);
+});
+
+
+egg-redis (npm 模块:推荐)
+
+方案： 公共数据缓存好，redis 速度能够快100-1000倍
+
+
+
+20. 解析markdown 语法 用一个 showdown （npm包）
+
+
+21. 1. 购物车数据保存到本地（cookies）
+    2. 购物车数据保存到数据库 （必须登录）
+    3. 购物车数据保存到本地  登录成功后同步到数据库 （用户最多）
+
+
+22. 商品修改 信息也保存在 cookies ,价格
+
+23. 发送短信
+一、找短信接口运营商
+https://www.juhe.cn/service
+https://www.yunpian.com/
+
+    注册，复制 试例代码 nodejs
+
+
+支付宝支付：
+
+    https://open.alipay.com/developmentAccess/developmentAccess.htm
+
+    1.企业支付宝账户：
+    2. RSA 密钥工具 https://docs.open.alipay.com/291/106097/
+
+    3.签名。并保存好私钥、公钥, 还有支付宝公钥
+
+流程：
+
+1。官方支付流程文档:https://docs.open.alipay.com/270/105899/
+
+
+ node 中使用方式
+
+1、安装模块
+npm i alipay-mobile -S
+2、引入模块
+const Alipay = require('alipay-mobile')
+3、配置开放平台 appid、 你的应用私钥、蚂蚁金服支付宝公钥
+const options = {
+app_id: '2018122062672017',
+appPrivKeyFile: "应用私钥",
+alipayPubKeyFile: "支付宝公钥"
+}
+4、实例化 Alipay
+const service = new Alipay(options);
+5、配置支付订单的信息、以及配置支付参数
+const data = {
+subject: '辣条', out_trade_no: '1232423', total_amount: '100'
+}
+const basicParams = {
+return_url: 'http://xxx.com', notify_url:'http://xxx.com'
+6、生成支付宝支付跳转地址
+//支付成功返回地址 //支付成功异步通知地址
+}
+service.createPageOrderURL(网页)
+service.createWebOrderURL(data, basicParams) .then(result => {
+console.log(result.data); //result.data 就是下单后支付宝返回的跳转地址 跳转过去就可以 执行支付 result.message == 'success' 表示成功
+console.log(result); })
+7、处理异步通知
+支付成功后支付宝会异步给我们服务器 post 数据，这个时候我们需要验证 post 的数据
+
+是否正确，如果 post 的数据合法的话执行更新订单操作。
+const params = ctx.request.body; //接收 post 提交的 XML 数据 const result = await serviceAlipay.createPageOrderURL(params); if(result.code==0){
+if(params.trade_status=='TRADE_SUCCESS'){ //更新订单
+} }
+3、Egg.js 中接收 post 的 XML 数据 1、安装 koa-xml-body 模块
+2、middleware 下面新建 xmlparse.js
+3、路由中配置 xmlparse
+cnpm install koa-xml-body --save
+module.exports = require('koa-xml-body');
+const xmlparseMiddleware = app.middleware.xmlparse();
+router.get('/alipay/aliPayNotify',
+    initMiddleware,xmlparseMiddleware, controller.default.alipay.aliPayNotify);
+    router.get('/alipay/rpay', initMiddleware,xmlparseMiddleware, controller.default.alipay.rpay);
+
+
+
+成功后返回两个 get 成功后返回的页面，  post 返回的数据 xml 数据 koa-xml-body
+
+
+1、微信支付前的准备工作
+1、准备工作:个体工商户、企业、政府及事业单位。
+https://pay.weixin.qq.com/static/applyment_guide/applyment_detail_website.shtml 2、需要获取内容:
+appid:应用 APPID(必须配置，开户邮件中可查看) MCHID:微信支付商户号(必须配置，开户邮件中可查看)
+KEY:API 密钥，参考开户邮件设置(必须配置，登录商户平台自行设置)
+注意审核成功后需要开通 native支付
+
+注意配置: 商户-》 产品中心——》配置回调地址， koa-xml-body，没法获取 post 数据，需要用原生node  xml2js
+
+
+    扩展：jwt 验证 json web token ,请求接口 获取token ,接口携带token 才能访问

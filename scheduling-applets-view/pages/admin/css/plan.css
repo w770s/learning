@@ -1,0 +1,109 @@
+.content {
+	padding: 20upx;
+	font-size: 28upx;
+	height: 100vh;
+	text-align: center;
+	color: #7f8389;
+}
+
+.uni-input {
+	position: relative;
+	width: 750upx;
+	height: 80upx;
+	padding: 20upx 0;
+	font-size: 28upx;
+	color: #7f8389;
+	box-sizing: border-box;
+	text-align: center;
+	border-bottom: solid 1upx #eeeeee;
+	.uni-date {
+		position: absolute;
+		left: 20upx;
+	}
+}
+
+.uni-timeBox {
+	padding: 10upx 30upx;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 25upx;
+	text-align: left;
+	box-shadow: 0upx 0upx 16upx 0upx rgba(0, 0, 0, 0.1);
+	border-radius: 16upx;
+}
+
+.uni-timeSection {
+	position: relative;
+	padding: 20upx 10upx;
+	.uni-getCarNum{
+		position: absolute;
+		top:20upx;
+		right:0upx;
+		.icon-right {
+			margin-left:10upx;
+			display: inline-block;
+			transform: rotate(-90deg);
+			color: #7f8389;
+			font-size: 35upx;
+		}
+		.icon-right-trans{
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.uni-firmList {
+	position: relative;
+	border-top: 1upx solid #f2f2f2;
+}
+.uni-timeSection {
+	display: flex;
+	align-items: center;
+	font-size: 34upx;
+	color: #7f8389;
+	& img {
+		height: 32upx;
+		width: 32upx;
+		margin-right: 14upx;
+	}
+}
+
+.uni-tagicon {
+	display: flex;
+	padding: 15upx;
+
+	.uni-tag1,
+	.uni-tag2 {
+		height: 35upx;
+		width: 35upx;
+		display: flex;
+		justify-content: center;
+		align-item: center;
+		border-radius: 5upx;
+		margin-right: 10upx;
+	}
+
+	.uni-tag1 {
+		border: 1px solid #ff8100;
+		color: #ff8100;
+	}
+
+	.uni-tag2 {
+		border: 1px solid #00cf66;
+		color: #00cf66;
+	}
+}
+.material-status {
+	padding: 20upx 0;
+	width: 100%;
+	border-top: 1upx solid #f2f2f2;
+	button{
+		border-radius: 5upx;
+		font-size: 34upx;
+		text-align: center;
+		line-height: 80upx;
+		color: #fff;
+		background-color: #29B6F6;
+	}
+}

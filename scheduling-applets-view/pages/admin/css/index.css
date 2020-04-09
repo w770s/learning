@@ -1,0 +1,85 @@
+.content {
+	font-size: 28upx;
+	text-align: center;
+	height: 400upx;
+}
+
+.logo {
+	height: 200upx;
+	width: 200upx;
+	margin-top: 200upx;
+}
+
+.uni-input {
+	position: relative;
+	width: 750upx;
+	height: 80upx;
+	padding: 20upx 0;
+	font-size: 30upx;
+	line-height: 40upx;
+	color: #7f8389;
+	box-sizing: border-box;
+	text-align: center;
+	border-bottom: solid 1upx #eeeeee;
+	.icon-left {
+		margin-right: 20upx;
+	}
+	.icon-right {
+		margin-left: 20upx;
+	}
+	.uni-date {
+		position: absolute;
+		left: 30upx;
+	}
+}
+
+.uni-material {
+	width: 690upx;
+	height: 200upx;
+	box-shadow: 0upx 0upx 16upx 0upx rgba(0, 0, 0, 0.1);
+	border-radius: 16upx;
+	padding: 20upx 0upx 20upx 20upx;
+	margin-bottom: 20upx;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	.material-name {
+		width: 100%;
+		padding: 20upx 0upx;
+		text-align: left;
+		font-size: 60upx;
+		color: #3b95fa;
+		.material-name-num {
+			position: relative;
+			bottom:0px;
+			height: 30upx;
+			font-size: 24upx;
+			color: #666666;
+		}
+	}
+
+	.material-Car {
+		padding: 20upx;
+		width: 250upx;
+		color: #666666;
+		font-size: 24upx;
+		box-sizing: border-box;
+		border-left: solid 1upx #eeeeee;
+		.material-Car-num {
+			height: 100%;
+			font-size: 60upx;
+			color: #3b95fa;
+		}
+		.material-Car-done {
+			position: relative;
+			bottom: 20px;
+			line-height: 20px;
+			
+		}
+	}
+}
+.uni-material-box {
+	width: 750upx;
+	box-sizing: border-box;
+	padding: 30upx 30upx 150upx 30upx;
+}

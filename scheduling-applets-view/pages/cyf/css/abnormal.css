@@ -1,0 +1,72 @@
+.ui-content {
+	border-top: 1upx solid #fff;
+	height: 100vh;
+	background-color: #F6F6F6;
+}
+
+.ui-abnormalType {
+	margin: 20upx 0;
+	display: flex;
+	font-size: 30upx;
+	height: 90upx;
+	line-height: 50upx;
+	background-color: #fff;
+	padding: 20upx 30upx;
+	box-sizing: border-box;
+	justify-content: space-between;
+
+	text:nth-of-type(1) {
+		color: red;
+	}
+
+	input {
+		width: 500upx;
+		height: 50upx;
+		margin-left: 50upx;
+		text-align: right;
+	}
+}
+
+.ui-abnormalRemark {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	font-size: 30upx;
+
+	view {
+		padding: 20upx 30upx;
+		box-sizing: border-box;
+		height: 90upx;
+		border-bottom: 1upx solid #F6F6F6;
+	}
+
+	textarea {
+		width: 100%;
+		min-height: 100upx;
+		padding: 20upx 30upx;
+		box-sizing: border-box;
+	}
+
+	.ui-remarknumber {
+		display: block;
+		position: absolute;
+		bottom: 20upx;
+		right: 30upx;
+		color: #BBBBBB;
+		font-size: 24upx;
+	}
+}
+
+.ui-confirmChoose {
+	margin: 250upx auto;
+
+	button {
+		color: #fff;
+		width: 690upx;
+		height: 94upx;
+		font-size: 36upx;
+		background: #29B6F6;
+		border-radius: 10upx;
+	}
+}
