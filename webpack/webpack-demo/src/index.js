@@ -56,8 +56,8 @@
 // )
 // // good
 // promise.then(suc=>console.log(1)).catch(err=>console.log(2))
-//理由是第二种写法可以捕获前面then方法执行中的错误，也更接近同步的写法（try/catch）。
-// 因此，建议总是使用catch方法，而不使用then方法的第二个参数。
+//理由是第二种写法可以因此，建议总是使用catch方法，而不使用then方法的第二个参数。捕获前面then方法执行中的错误，也更接近同步的写法（try/catch）。
+// 
 
 // 如果没有使用catch方法指定错误处理的回调函数，Promise 对象抛出的错误不会传递到外层代码，即不会有任何反应
 // Promise 内部的错误不会影响到 Promise 外部的代码，通俗的说法就是“Promise 会吃掉错误”。

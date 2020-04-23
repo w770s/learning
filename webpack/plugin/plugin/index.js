@@ -10,7 +10,6 @@ class CopyRightWebpackPlugin {
         //     /* ... */
         //     callback();
         // });
-
         compiler.hooks.compile.tap('CopyRightWebpackPlugin',(compilationParams)=>{
             debugger;
             console.log(compilationParams)

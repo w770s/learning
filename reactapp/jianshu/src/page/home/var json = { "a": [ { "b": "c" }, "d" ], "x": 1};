@@ -1,0 +1,15 @@
+var json = { "a": [ { "b": "c" }, "d" ], "x": 1};
+
+fuction  getJson(data, value){
+	let firstA = Object.keys(data);
+	firstA.map((index)=>{
+		if(value === firstA[index]){
+			return firstA[index]
+		}
+		else{
+			if(data.firstA[index].length>1){
+				 getJso(data.firstA[index],value)
+			}
+		}
+	})
+}

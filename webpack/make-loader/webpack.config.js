@@ -28,7 +28,7 @@ module.exports={
                 },
                 {
                     loader: 'replaceAsync',
-                    options:{
+                    options: {
                         name: 'peter'
                     }
                 }

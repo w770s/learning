@@ -26,6 +26,7 @@ class AntD extends Component{
             store.getState()
         )
     }
+    
     inputValueChange(e){
         const action = getInputVlaue(e.target.value)
         store.dispatch(action) // 经测试，没变化一个字符就执行一次

@@ -1,6 +1,6 @@
 // HTTP 模块
 // // 1. 引入 http 模块
-// const http =require('http')
+// const http = require('http')
 //
 // // 2. 创建 http 模块服务器
 //
