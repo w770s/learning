@@ -1,0 +1,173 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		{
+			"path": "pages/home/index"
+		},
+		{
+			"path": "pages/consultationList/index"
+		},
+		{
+			"path": "pages/login/guide"
+		}
+	],
+	"subPackages": [{
+		"root": "pagesA",
+		"pages": [
+			{
+				"path": "consulting/consultPage",
+				"style": {
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "consulting/physicalReport"
+			},
+			{
+				"path": "consulting/medicalRecord"
+			},
+			{
+				"path": "consulting/videoDetail"
+			},
+			{
+				"path": "personalInformation/index"
+			},
+			{
+				"path": "personalInformation/upDatePersonalInformation"
+			},
+			{
+				"path": "personalInformation/personalDescription"
+			},
+			{
+				"path": "personalInformation/goodSpecialty"
+			},
+			{
+				"path": "personalInformation/goodDiseaseTag"
+			},
+			{
+				"path": "personalInformation/welcome"
+			},
+			{
+				"path": "myOrder/index"
+			},
+			{
+				"path": "myOrder/orderDetails"
+			},
+			{
+				"path": "accountSettings/index"
+			},
+			{
+				"path": "specialEmr/index"
+			},
+			{
+				"path": "myPrescription/index"
+			},
+			{
+				"path": "myPrescription/details"
+			},
+			{
+				"path": "myPrescription/prescriptionPdf"
+			},
+			{
+				"path": "prescribe/index"
+			},
+			{
+				"path": "prescribe/prescribeDosage"
+			},
+			{
+				"path": "prescribe/routeAndFrequency"
+			},
+			{
+				"path": "prescribe/pastMedicalHistory"
+			},
+			{
+				"path": "prescribe/prescribeCheck"
+			}
+		]
+	}],
+	"preloadRule": {
+		"pages/consultationList/index": {
+			"network": "all",
+			"packages": ["pagesA"]
+		}
+	},
+	"condition": {
+		"current": 1,
+		"list": [
+			{
+				"name": "login",
+				"path": "pages/login/guide"
+			},
+			{
+				"name": "home",
+				"path": "pages/home/index"
+			},
+			{
+				"name": "consultationList",
+				"path": "pages/consultationList/index"
+			},
+			{
+				"name": "consultPage",
+				"path": "pagesA/consulting/consultPage"
+			},
+			{
+				"name": "medicalRecord",
+				"path": "pagesA/consulting/medicalRecord"
+			},
+			{
+				"name": "specialEmr",
+				"path": "pagesA/specialEmr/index"
+			},
+			{
+				"name": "prescriptionIndex",
+				"path": "pagesA/prescribe/index"
+			},
+			{
+				"name": "myPrescriptionIndex",
+				"path": "pagesA/myPrescription/index"
+			},
+			{
+				"name": "myPrescriptionDetail",
+				"path": "pagesA/myPrescription/details"
+			},
+			{
+				"name": "prescriptionPdf",
+				"path": "pagesA/myPrescription/prescriptionPdf"
+			},
+			{
+				"name": "prescribeDosage",
+				"path": "pagesA/prescribe/prescribeDosage"
+			}
+		]
+	},
+	"tabBar": {
+		"color": "#B2B2B2",
+		"selectedColor": "#2884FF",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"height": "50px",
+		"fontSize": "10px",
+		"iconWidth": "24px",
+		"spacing": "3px",
+		"list": [{
+			"pagePath": "pages/consultationList/index",
+			"selectedIconPath": "static/image/tabbar/newsSelectIcon.png",
+			"iconPath": "static/image/tabbar/newsIcon.png",
+			"text": "消息"
+		}, {
+			"pagePath": "pages/home/index",
+			"selectedIconPath": "static/image/tabbar/mySelectIcon.png",
+			"iconPath": "static/image/tabbar/myIcon.png",
+			"text": "我的"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "#fff",
+		"navigationBarTitleText": "海螺互联网医院",
+		"navigationBarBackgroundColor": "#5EA6F8",
+		"backgroundColor": "#F6F6F6",
+		"navigationStyle": "custom"
+	}
+}

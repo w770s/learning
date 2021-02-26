@@ -1,0 +1,70 @@
+--------------------------------info[11:45:14]--------------------------------
+System.Exception: v2rayN start up
+
+ 
+--------------------------------info[11:45:17]--------------------------------
+System.Exception: Webserver prefixes http://127.0.0.1:10810/pac/
+
+ 
+--------------------------------info[11:45:17]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------info[11:45:17]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------info[11:46:13]--------------------------------
+System.Exception: Webserver Stop 127.0.0.1
+
+ 
+--------------------------------info[11:46:13]--------------------------------
+System.Exception: Webserver Stop 10.62.0.245
+
+ 
+--------------------------------由于线程退出或应用程序请求，已中止 I/O 操作。[11:46:13]--------------------------------
+System.Net.HttpListenerException (0x80004005): 由于线程退出或应用程序请求，已中止 I/O 操作。
+   在 System.Net.HttpListener.GetContext()
+   在 v2rayN.HttpProxyHandler.HttpWebServer.<Run>b__4_0(Object o)
+
+ 
+--------------------------------info[11:51:16]--------------------------------
+System.Exception: v2rayN start up
+
+ 
+--------------------------------info[11:51:17]--------------------------------
+System.Exception: Webserver prefixes http://127.0.0.1:10810/pac/
+
+ 
+--------------------------------info[11:51:17]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------info[11:51:17]--------------------------------
+System.Exception: Webserver prefixes http://10.62.0.220:10810/pac/
+
+ 
+--------------------------------拒绝访问。[11:51:17]--------------------------------
+System.Net.HttpListenerException (0x80004005): 拒绝访问。
+   在 System.Net.HttpListener.AddAllPrefixes()
+   在 System.Net.HttpListener.Start()
+   在 v2rayN.HttpProxyHandler.HttpWebServer..ctor(String[] prefixes, Func`2 method)
+
+ 
+--------------------------------info[11:51:17]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------info[15:16:17]--------------------------------
+System.Exception: Webserver Stop 127.0.0.1
+
+ 
+--------------------------------info[15:16:17]--------------------------------
+System.Exception: Webserver Stop 10.62.0.220
+
+ 
+--------------------------------info[15:16:17]--------------------------------
+System.Exception: Webserver Stop 无法访问已释放的对象。
+对象名:“System.Net.HttpListener”。
+
+ 

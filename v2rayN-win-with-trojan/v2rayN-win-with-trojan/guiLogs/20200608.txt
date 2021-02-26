@@ -1,0 +1,98 @@
+--------------------------------info[08:33:04]--------------------------------
+System.Exception: Webserver Stop 127.0.0.1
+
+ 
+--------------------------------info[08:33:04]--------------------------------
+System.Exception: Webserver Stop 10.62.0.200
+
+ 
+--------------------------------info[08:33:04]--------------------------------
+System.Exception: Webserver Stop 无法访问已释放的对象。
+对象名:“System.Net.HttpListener”。
+
+ 
+--------------------------------info[09:02:48]--------------------------------
+System.Exception: v2rayN start up
+
+ 
+--------------------------------info[09:02:49]--------------------------------
+System.Exception: Webserver prefixes http://127.0.0.1:10810/pac/
+
+ 
+--------------------------------info[09:02:49]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------拒绝访问。[09:02:49]--------------------------------
+System.Net.HttpListenerException (0x80004005): 拒绝访问。
+   在 System.Net.HttpListener.AddAllPrefixes()
+   在 System.Net.HttpListener.Start()
+   在 v2rayN.HttpProxyHandler.HttpWebServer..ctor(String[] prefixes, Func`2 method)
+
+ 
+--------------------------------info[09:02:49]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------info[09:03:03]--------------------------------
+System.Exception: Webserver Stop 127.0.0.1
+
+ 
+--------------------------------info[09:03:03]--------------------------------
+System.Exception: Webserver Stop 10.62.0.200
+
+ 
+--------------------------------info[09:03:03]--------------------------------
+System.Exception: Webserver Stop 无法访问已释放的对象。
+对象名:“System.Net.HttpListener”。
+
+ 
+--------------------------------info[09:03:03]--------------------------------
+System.Exception: Webserver prefixes http://127.0.0.1:10810/pac/
+
+ 
+--------------------------------info[09:03:03]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------info[09:48:22]--------------------------------
+System.Exception: Webserver Stop 127.0.0.1
+
+ 
+--------------------------------info[09:48:22]--------------------------------
+System.Exception: Webserver Stop 10.62.0.200
+
+ 
+--------------------------------info[09:48:22]--------------------------------
+System.Exception: Webserver Stop 无法访问已释放的对象。
+对象名:“System.Net.HttpListener”。
+
+ 
+--------------------------------info[09:48:34]--------------------------------
+System.Exception: Webserver Stop 127.0.0.1
+
+ 
+--------------------------------info[09:48:34]--------------------------------
+System.Exception: Webserver Stop 10.62.0.200
+
+ 
+--------------------------------info[09:48:34]--------------------------------
+System.Exception: Webserver Stop 无法访问已释放的对象。
+对象名:“System.Net.HttpListener”。
+
+ 
+--------------------------------info[09:48:34]--------------------------------
+System.Exception: Webserver prefixes http://127.0.0.1:10810/pac/
+
+ 
+--------------------------------在前缀“http://127.0.0.1:10810/pac/”上侦听失败，因为它与计算机上的现有注册冲突。[09:48:34]--------------------------------
+System.Net.HttpListenerException (0x80004005): 在前缀“http://127.0.0.1:10810/pac/”上侦听失败，因为它与计算机上的现有注册冲突。
+   在 System.Net.HttpListener.AddAllPrefixes()
+   在 System.Net.HttpListener.Start()
+   在 v2rayN.HttpProxyHandler.HttpWebServer..ctor(String[] prefixes, Func`2 method)
+
+ 
+--------------------------------info[09:48:34]--------------------------------
+System.Exception: Webserver running...
+
+ 

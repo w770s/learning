@@ -1,0 +1,38 @@
+--------------------------------info[15:03:08]--------------------------------
+System.Exception: Webserver Stop 127.0.0.1
+
+ 
+--------------------------------info[15:03:08]--------------------------------
+System.Exception: Webserver Stop 10.62.0.206
+
+ 
+--------------------------------由于线程退出或应用程序请求，已中止 I/O 操作。[15:03:08]--------------------------------
+System.Net.HttpListenerException (0x80004005): 由于线程退出或应用程序请求，已中止 I/O 操作。
+   在 System.Net.HttpListener.GetContext()
+   在 v2rayN.HttpProxyHandler.HttpWebServer.<Run>b__4_0(Object o)
+
+ 
+--------------------------------info[15:03:18]--------------------------------
+System.Exception: Webserver prefixes http://127.0.0.1:10810/pac/
+
+ 
+--------------------------------info[15:03:18]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------info[18:01:42]--------------------------------
+System.Exception: v2rayN start up
+
+ 
+--------------------------------info[18:01:43]--------------------------------
+System.Exception: Webserver prefixes http://127.0.0.1:10810/pac/
+
+ 
+--------------------------------info[18:01:43]--------------------------------
+System.Exception: Webserver running...
+
+ 
+--------------------------------info[18:01:43]--------------------------------
+System.Exception: Webserver running...
+
+ 

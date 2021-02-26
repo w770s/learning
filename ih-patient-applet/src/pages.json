@@ -1,0 +1,433 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/home"
+		}, {
+			"path": "pages/login/index"
+		}, {
+			"path": "pages/login/guide"
+		}, {
+			"path": "pages/seeDoctor/index"
+		}, {
+			"path": "pages/questionnaire/index"
+		}
+	],
+	"subPackages": [{
+		"root": "pagesA",
+		"pages": [{
+			"path": "videoList/index"
+		}, {
+			"path": "videoList/videoDetail"
+		}, {
+			"path": "healthyCard/index"
+		}, {
+			"path": "healthyCard/addCard"
+		}, {
+			"path": "healthyCard/userCard"
+		}, {
+			"path": "healthyCard/securityCode"
+		}, {
+			"path": "myNews/index"
+		}, {
+			"path": "setting/index"
+		}, {
+			"path": "setting/changPage"
+		}, {
+			"path": "medicalReport/index"
+		}, {
+			"path": "medicalReport/reportDetail"
+		}, {
+			"path": "medicalReport/consultOrder"
+		}, {
+			"path": "consulting/index"
+		}, {
+			"path": "consulting/consultPage",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "consulting/doctorDetail"
+		}, {
+			"path": "consulting/moreEvaluate"
+		}, {
+			"path": "consulting/evaluatePage"
+		}, {
+			"path": "consulting/prescriptionDetails"
+		}, {
+			"path": "myOrder/index"
+		}, {
+			"path": "myOrder/orderDetails"
+		}, {
+			"path": "bookRegister/index"
+		}, {
+			"path": "bookRegister/robotTalk"
+		}, {
+			"path": "bookRegister/doctorFilter"
+		}, {
+			"path": "bookRegister/doctorReserve"
+		}, {
+			"path": "payOrder/index"
+		}, {
+			"path": "payOrder/consumptionList"
+		}, {
+			"path": "registerOrder/index"
+		}, {
+			"path": "registerOrder/orderDetails"
+		}, {
+			"path": "remoteTreat/index"
+		}, {
+			"path": "remoteTreat/sectionDetail"
+		}, {
+			"path": "inpatientServices/index"
+		}, {
+			"path": "inpatientServices/dailyList"
+		}, {
+			"path": "inpatientServices/inpatientMessage"
+		}, {
+			"path": "inpatientServices/hospitalization"
+		}, {
+			"path": "inpatientServices/expenseDetails"
+		}, {
+			"path": "recharge/index"
+		}, {
+			"path": "recharge/paymentRecord"
+		}, {
+			"path": "recharge/payFinish"
+		},{
+			"path": "testReport/index"
+		}, {
+			"path": "testReport/reportDetails"
+		}, {
+			"path": "clinic/index"
+		}, {
+			"path": "clinic/medicalRecord"
+		}, {
+			"path": "onlineConsultation/index"
+		}, {
+			"path": "consultationOrder/index"
+		}, {
+			"path": "consultationOrder/orderDetails"
+		}, {
+			"path": "prescriptionOrder/index"
+		}, {
+			"path": "prescriptionOrder/orderDetails"
+		}, {
+			"path": "prescriptionOrder/testDetails"
+		}, {
+			"path": "prescriptionOrder/editAddress"
+		}, {
+			"path": "prescriptionOrder/addAddress"
+		}, {
+			"path": "prescriptionOrder/seeLogistics"
+		}, {
+			"path": "questionnaire/index"
+		}, {
+			"path": "questionnaire/questionnaireDetails"
+		}, {
+			"path": "medicalAppointment/index"
+		}, {
+			"path": "medicalAppointment/medicalDetails"
+		}, {
+			"path": "medicalAppointment/detailsList"
+		}, {
+			"path": "hospitalProfile/index"
+		}, {
+			"path": "pricePublicity/index"
+		}, {
+			"path": "nucleinTest/index"
+		}, {
+			"path": "nucleinTest/testDetail"
+		}
+		]
+	}],
+	"tabBar": {
+		"color": "#B2B2B2",
+		"selectedColor": "#2884FF",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/login/home",
+			"iconPath": "static/homePageOut.png",
+			"selectedIconPath": "static/homePageOn.png",
+			"text": "首页"
+		},{
+			"pagePath": "pages/seeDoctor/index",
+			"iconPath": "static/clinicalOut.png",
+			"selectedIconPath": "static/clinicalOn.png",
+			"text": "就诊"
+		},{ "pagePath": "pages/login/index",
+			"iconPath": "static/myOut.png",
+			"selectedIconPath": "static/myOn.png",
+			"text": "我的"
+		}]
+	},
+	"preloadRule": {
+		"pages/login/index": {
+			"network": "all",
+			"packages": ["pagesA"]
+		}
+	},
+	"condition": {
+		"current": 1,
+		"list": [{
+				"name": "login",
+				"path": "pages/login/index"
+			},
+			{
+				"name": "guide",
+				"path": "pages/login/guide"
+			},
+			{
+				"name": "home",
+				"path": "pages/login/home"
+			},
+			{
+				"name": "questionnaire",
+				"path": "pages/questionnaire/index"
+			},
+			{
+				"name": "videoList",
+				"path": "pageA/videoList/index"
+			},
+			{
+				"name": "medicalReport",
+				"path": "pagesA/medicalReport/index"
+			},
+			{
+				"name": "medicalReportDetail",
+				"path": "pagesA/medicalReport/reportDetail"
+			},
+			{
+				"name": "consultOrder",
+				"path": "pagesA/medicalReport/consultOrder"
+			},
+			{
+				"name": "myOrder",
+				"path": "pagesA/myOrder/index"
+			},
+			{
+				"name": "myNew",
+				"path": "pagesA/myNews/index"
+			},
+			{
+				"name": "orderDetails",
+				"path": "pagesA/myOrder/orderDetails"
+			},
+			{
+				"name": "consulting",
+				"path": "pagesA/consulting/index"
+			},
+			{
+				"name": "doctorDetail",
+				"path": "pagesA/consulting/doctorDetail"
+			},
+			{
+				"name": "evaluatePage",
+				"path": "pagesA/consulting/evaluatePage"
+			},
+			{
+				"name": "consultPage",
+				"path": "pagesA/consulting/consultPage"
+			},
+			{
+				"name": "prescriptionDetails",
+				"path": "pagesA/consulting/prescriptionDetails"
+			},
+			{
+				"name": "cardList",
+				"path": "pagesA/healthyCard/index"
+			},
+			{
+				"name": "addCard",
+				"path": "pagesA/healthyCard/addCard"
+			},
+			{
+				"name": "securityCode",
+				"path": "pagesA/healthyCard/securityCode"
+			},
+			{
+				"name": "userCard",
+				"path": "pagesA/healthyCard/userCard"
+			},
+			{
+				"name": "setting",
+				"path": "pagesA/setting/index"
+			},
+			{
+				"name": "settingChange",
+				"path": "pagesA/setting/changPage"
+			},
+			{
+				"name": "bookRegister",
+				"path": "pagesA/bookRegister/index"
+			},
+			{
+				"name": "doctorFilter",
+				"path": "pagesA/bookRegister/doctorFilter"
+			},
+			{
+				"name": "doctorReserve",
+				"path": "pagesA/bookRegister/doctorReserve"
+			},
+			{
+				"name": "payOrder",
+				"path": "pagesA/payOrder/index"
+			},
+			{
+				"name": "consumptionList",
+				"path": "pagesA/payOrder/consumptionList"
+			},
+			{
+				"name": "registerOrder",
+				"path": "pagesA/registerOrder/index"
+			},
+			{
+				"name": "registerOrderDetails",
+				"path": "pagesA/registerOrder/orderDetails"
+			},
+			{
+				"name": "seeDoctor",
+				"path": "pages/seeDoctor/index"
+			},
+			{
+				"name": "remoteTreat",
+				"path": "pagesA/remoteTreat/index"
+			},
+			{
+				"name": "remoteTreatDetail",
+				"path": "pagesA/remoteTreat/sectionDetail"
+			},
+			{
+				"name": "robotTalk",
+				"path": "pagesA/bookRegister/robotTalk"
+			},
+			{
+				"name": "inpatientServices",
+				"path": "pagesA/inpatientServices/index"
+			},
+			{
+				"name": "dailyList",
+				"path": "pagesA/inpatientServices/dailyList"
+			},
+			{
+				"name": "inpatientMessage",
+				"path": "pagesA/inpatientServices/inpatientMessage"
+			},
+			{
+				"name": "hospitalization",
+				"path": "pagesA/inpatientServices/hospitalization"
+			},
+			{
+				"name": "expenseDetails",
+				"path": "pagesA/inpatientServices/expenseDetails"
+			},
+			{
+				"name": "recharge",
+				"path": "pagesA/recharge/index"
+			},
+			{
+				"name": "paymentRecord",
+				"path": "pagesA/recharge/paymentRecord"
+			},
+			{
+				"name": "payFinish",
+				"path": "pagesA/recharge/payFinish"
+			},
+			{
+				"name": "testReport",
+				"path": "pagesA/testReport/index"
+			},
+			{
+				"name": "testReportDetails",
+				"path": "pagesA/testReport/reportDetails"
+			},
+			{
+				"name": "clinic",
+				"path": "pagesA/clinic/index"
+			},
+			{
+				"name": "medicalRecord",
+				"path": "pagesA/clinic/medicalRecord"
+			},
+			{
+				"name": "onlineConsultation",
+				"path": "pagesA/onlineConsultation/index"
+			},
+			{
+				"name": "consultationOrder",
+				"path": "pagesA/consultationOrder/index"
+			},
+			{
+				"name": "consultationDetails",
+				"path": "pagesA/consultationOrder/orderDetails"
+			},
+			{
+				"name": "prescriptionOrder",
+				"path": "pagesA/prescriptionOrder/index"
+			},
+			{
+				"name": "prescriptionDetails",
+				"path": "pagesA/prescriptionOrder/orderDetails"
+			},
+			{
+				"name": "prescriptionTestDetails",
+				"path": "pagesA/prescriptionOrder/testDetails"
+			},
+			{
+				"name": "editAddress",
+				"path": "pagesA/prescriptionOrder/editAddress"
+			},
+			{
+				"name": "addAddress",
+				"path": "pagesA/prescriptionOrder/addAddress"
+			},
+			{
+				"name": "seeLogistics",
+				"path": "pagesA/prescriptionOrder/seeLogistics"
+			},
+			{
+				"name": "questionnaire",
+				"path": "pagesA/questionnaire/index"
+			},
+			{
+				"name": "questionnaireDetails",
+				"path": "pagesA/questionnaire/questionnaireDetails"
+			},
+			{
+				"name": "medicalAppointment",
+				"path": "pagesA/medicalAppointment/index"
+			},
+			{
+				"name": "medicalDetails",
+				"path": "pagesA/medicalAppointment/medicalDetails"
+			},
+			{
+				"name": "medicalDetailsList",
+				"path": "pagesA/medicalAppointment/detailsList"
+			},
+			{
+				"name": "hospitalProfile",
+				"path": "pagesA/hospitalProfile/index"
+			},
+			{
+				"name": "pricePublicity",
+				"path": "pagesA/pricePublicity/index"
+			},
+			{
+				"name": "nucleinTest",
+				"path": "pagesA/nucleinTest/index"
+			},
+			{
+				"name": "testDetail",
+				"path": "pagesA/nucleinTest/testDetail"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "#fff",
+		"navigationBarTitleText": "健康管家",
+		"navigationBarBackgroundColor": "#5EA6F8",
+		"backgroundColor": "#fff",
+		"navigationStyle": "custom"
+	}
+}
